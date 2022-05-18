@@ -1,3 +1,60 @@
 @import 'functions';
 @import 'mixins';
 
+.main {
+  background-color: #f8f8f8;
+
+  .container {
+    @include device(tablet) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__text {
+    padding-left: 20px;
+    @include device(tablet){
+      padding-left: 0;
+    }
+
+    h1 {
+      font-size: rem(64);
+      font-weight: 600;
+      line-height: rem(72);
+      text-transform: capitalize;
+      padding-bottom: 30px;
+      @include device(tablet){
+        padding-top: 80px;
+        text-align: center;
+      }
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 70px;
+        height: 70px;
+        transform: translateX(-15px);
+        @include device(tablet){
+          transform: translateX(0);
+        }
+      }
+
+      p {
+        max-width: 30ch;
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 24px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &__img {
+    @include device(tablet) {
+      width: 300px;
+    }
+  }
+}

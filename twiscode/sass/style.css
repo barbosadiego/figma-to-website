@@ -3,8 +3,16 @@
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
 .header {
   padding: 0 20px;
+  height: 100px;
+  display: grid;
 }
 .header nav {
   display: flex;
@@ -17,7 +25,7 @@
   gap: 32px;
   margin-left: auto;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header__menus {
     position: fixed;
     padding: 0;
@@ -36,24 +44,37 @@
   transform: translateX(0);
 }
 .header__menus a {
-  font-size: 0.875rem;
+  position: relative;
+  font-size: 1rem;
   text-transform: capitalize;
   color: #000;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header__menus a {
     font-size: 1.75rem;
   }
 }
+.header__menus a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.3s;
+  position: absolute;
+}
+.header__menus a:hover::after {
+  width: 80%;
+}
 .header__search {
   padding-left: 64px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header__search {
     display: none;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header .mobile-menu {
     z-index: 10;
     right: 30px;
@@ -74,6 +95,63 @@
   }
 }
 
+.main {
+  background-color: #f8f8f8;
+}
+@media screen and (max-width: 950px) {
+  .main .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.main__text {
+  padding-left: 20px;
+}
+@media screen and (max-width: 950px) {
+  .main__text {
+    padding-left: 0;
+  }
+}
+.main__text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 950px) {
+  .main__text h1 {
+    padding-top: 80px;
+    text-align: center;
+  }
+}
+.main__text .intro {
+  display: flex;
+  align-items: center;
+}
+.main__text .intro img {
+  width: 70px;
+  height: 70px;
+  transform: translateX(-15px);
+}
+@media screen and (max-width: 950px) {
+  .main__text .intro img {
+    transform: translateX(0);
+  }
+}
+.main__text .intro p {
+  max-width: 30ch;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 24px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 950px) {
+  .main__img {
+    width: 300px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -90,6 +168,15 @@ li {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
 }
 
 img {
