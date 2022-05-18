@@ -1,0 +1,12 @@
+@mixin device($device) {
+  @if $device == tablet {
+    @media screen and (max-width: 850px) {
+      @content;
+    }
+  }
+  @if $device == mobile {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}
