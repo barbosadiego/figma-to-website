@@ -3,6 +3,8 @@
 
 .header {
   padding: 0 20px;
+  height: 100px;
+  display: grid;
 
   nav {
     display: flex;
@@ -34,11 +36,26 @@
     }
 
     a {
-      font-size: rem(14);
+      position: relative;
+      font-size: rem(16);
       text-transform: capitalize;
       color: #000;
       @include device(tablet) {
         font-size: rem(28);
+      }
+
+      &::after{
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: #000;
+        transition: .3s;
+        position: absolute;
+      }
+
+      &:hover::after{
+        width: 80%;
       }
     }
   }
@@ -73,3 +90,5 @@
     }
   }
 }
+
+
