@@ -3,6 +3,7 @@
 
 .main {
   background-color: #f8f8f8;
+  margin-bottom: 150px;
 
   .container {
     @include device(tablet) {
@@ -12,10 +13,6 @@
   }
 
   &__text {
-    padding-left: 20px;
-    @include device(tablet){
-      padding-left: 0;
-    }
 
     h1 {
       font-size: rem(64);
@@ -29,7 +26,7 @@
       }
     }
 
-    .intro {
+    .intro-text {
       display: flex;
       align-items: center;
 
