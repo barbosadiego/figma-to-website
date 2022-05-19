@@ -1,3 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -99,6 +132,11 @@
   background-color: #f8f8f8;
   margin-bottom: 150px;
 }
+@media screen and (max-width: 600px) {
+  .main {
+    margin-bottom: 50px;
+  }
+}
 @media screen and (max-width: 950px) {
   .main .container {
     grid-template-columns: 1fr;
@@ -147,10 +185,25 @@
 
 .intro {
   margin-bottom: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+@media screen and (max-width: 950px) {
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
 }
 .intro__text {
   display: grid;
   gap: 20px;
+}
+@media screen and (max-width: 950px) {
+  .intro__text {
+    grid-row: 1;
+  }
 }
 .intro__text h2 {
   font-size: 2.25rem;
@@ -158,48 +211,53 @@
   font-weight: 600;
   padding-bottom: 10px;
 }
-.intro__text h3 {
+.intro__info {
+  position: relative;
+}
+.intro__info h3 {
   font-size: 1.125rem;
   text-transform: capitalize;
   font-weight: 600;
   padding-bottom: 10px;
 }
-.intro__text p {
+.intro__info p {
   font-size: 1rem;
+  font-weight: 400;
   line-height: 24px;
   max-width: 40ch;
 }
-* {
-  box-sizing: border-box;
+.intro__info .icon img {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: -50px;
 }
-
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+@media screen and (max-width: 600px) {
+  .intro__info .icon img {
+    position: initial;
+    margin-bottom: 10px;
+    transform: translateX(-2px);
+  }
 }
-
-li {
-  list-style: none;
+.intro__img {
+  justify-self: center;
+  box-shadow: 0px 4px 30px #e5e5e5;
+  position: relative;
 }
-
-a {
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
+.intro__img::after {
+  content: "View Detail";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: #fff;
+  width: 163px;
+  height: 60px;
+  border-top-right-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.125rem;
 }
 
 /*# sourceMappingURL=style.css.map */

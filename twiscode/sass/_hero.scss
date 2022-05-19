@@ -4,6 +4,9 @@
 .main {
   background-color: #f8f8f8;
   margin-bottom: 150px;
+  @include device(mobile){
+    margin-bottom: 50px;
+  }
 
   .container {
     @include device(tablet) {
