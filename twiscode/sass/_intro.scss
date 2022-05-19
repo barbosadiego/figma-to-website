@@ -11,6 +11,9 @@
     justify-items: center;
     gap: 50px;
   }
+  @include device(mobile){
+    margin-bottom: 50px;
+  }
 
   &__text {
     display: grid;
