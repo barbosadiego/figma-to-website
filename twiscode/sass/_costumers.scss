@@ -1,0 +1,36 @@
+@import 'functions';
+@import 'mixins';
+
+.costumers{
+  margin-bottom: 150px;
+
+  h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: rem(36);
+    line-height: 45px;
+    margin-bottom: 50px;
+  }
+
+  &__logos{
+       
+    & > div{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+      place-items: center;
+      margin-bottom: 10px;
+      @include device(tablet){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      img{
+        @include device(tablet){
+          width: 110px;
+        }
+      }
+    }
+  }
+}

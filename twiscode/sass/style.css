@@ -23,6 +23,7 @@ h4,
 p {
   padding: 0;
   margin: 0;
+  color: #414141;
 }
 
 img {
@@ -335,6 +336,36 @@ img {
 @media screen and (max-width: 600px) {
   .work__img {
     display: none;
+  }
+}
+
+.costumers {
+  margin-bottom: 150px;
+}
+.costumers h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 45px;
+  margin-bottom: 50px;
+}
+.costumers__logos > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  place-items: center;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 950px) {
+  .costumers__logos > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .costumers__logos > div img {
+    width: 110px;
   }
 }
 
