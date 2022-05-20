@@ -492,4 +492,40 @@ img {
   padding: 7px 20px;
 }
 
+.footer {
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+.footer h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 3;
+  text-transform: capitalize;
+}
+.footer a {
+  color: #9f9f9f;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2.3;
+}
+.footer .link {
+  text-transform: capitalize;
+}
+.footer .contact li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.copy {
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+.copy p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 4;
+}
+
 /*# sourceMappingURL=style.css.map */
