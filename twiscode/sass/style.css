@@ -495,8 +495,14 @@ img {
 .footer {
   padding-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 850px) {
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
 }
 .footer h3 {
   font-weight: 600;
@@ -510,13 +516,33 @@ img {
   font-size: 1rem;
   line-height: 2.3;
 }
-.footer .link {
+.footer .links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 950px) {
+  .footer .links {
+    grid-template-columns: 1fr;
+  }
+}
+.footer .links .link {
   text-transform: capitalize;
+}
+@media screen and (max-width: 950px) {
+  .footer .mapa {
+    height: 70%;
+    width: auto;
+  }
 }
 .footer .contact li {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 850px) {
+  .footer .contact li {
+    justify-content: center;
+  }
 }
 
 .copy {
@@ -526,6 +552,12 @@ img {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 4;
+}
+@media screen and (max-width: 600px) {
+  .copy p {
+    line-height: 2;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
