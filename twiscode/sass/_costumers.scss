@@ -3,6 +3,9 @@
 
 .costumers{
   margin-bottom: 150px;
+  @include device(tablet){
+    margin-bottom: 50px;
+  }
 
   h2{
     text-align: center;

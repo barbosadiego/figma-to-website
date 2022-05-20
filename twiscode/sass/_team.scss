@@ -1,0 +1,53 @@
+@import 'functions';
+@import 'mixins';
+
+.team {
+  margin-bottom: 120px;
+  @include device(tablet){
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: rem(36);
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+
+  .slide-wrapper {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+
+  .slide {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+
+    @media screen and (max-width:780px) {
+      flex-direction: column;
+    }
+
+    li {
+      flex-shrink: 0;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: rem(24);
+      line-height: 2;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      color: #9f9f9f;
+      text-align: center;
+    }
+  }
+}

@@ -10,6 +10,7 @@
   @include device(tablet){
     grid-template-columns: 1fr;
     justify-items: center;
+    margin-bottom: 50px;
   }
 
   &__text{
