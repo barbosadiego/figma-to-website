@@ -92,6 +92,8 @@ img {
     align-items: center;
     justify-content: center;
     transform: translateX(-100%);
+    z-index: 10;
+    transition: 0.3s;
   }
 }
 .header__menus.active {
