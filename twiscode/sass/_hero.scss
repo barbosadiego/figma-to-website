@@ -6,6 +6,11 @@
   margin-bottom: 150px;
   @include device(tablet){
     margin-bottom: 50px;
+    background-color: rgba($color: #fff, $alpha: .8);
+    background-image: url(../image/hero-alt.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
   }
 
   .container {
@@ -26,6 +31,9 @@
       @include device(tablet){
         padding-top: 80px;
         text-align: center;
+      }
+      @include device(mobile){
+        font-size: rem(55);
       }
     }
 
@@ -54,7 +62,7 @@
 
   &__img {
     @include device(tablet) {
-      width: 300px;
+      display: none;
     }
   }
 }

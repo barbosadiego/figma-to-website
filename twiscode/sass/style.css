@@ -156,6 +156,11 @@ img {
 @media screen and (max-width: 950px) {
   .main {
     margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url(../image/hero-alt.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
   }
 }
 @media screen and (max-width: 950px) {
@@ -175,6 +180,11 @@ img {
   .main__text h1 {
     padding-top: 80px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__text h1 {
+    font-size: 3.4375rem;
   }
 }
 .main__text .intro-text {
@@ -200,7 +210,7 @@ img {
 }
 @media screen and (max-width: 950px) {
   .main__img {
-    width: 300px;
+    display: none;
   }
 }
 
