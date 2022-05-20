@@ -42,24 +42,6 @@
       line-height: 1.75;
       margin-bottom: 20px;
     }
-
-    a{
-      display: inline-block;
-      background-color: #4a4a4a;
-      color: #fff;
-      font-size: rem(14);
-      font-weight: 500;
-      line-height: 2.3;
-      padding: 10px 20px;
-      border: 2px solid transparent;
-      transition: .3s;
-
-      &:hover{
-        background-color: #fff;
-        color: #4a4a4a;
-        border-color: #4a4a4a;
-      }
-    }
   }
 
   &__img{

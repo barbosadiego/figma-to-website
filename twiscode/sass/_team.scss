@@ -26,7 +26,6 @@
     max-width: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 50px;
 
     @media screen and (max-width:780px) {
@@ -35,6 +34,10 @@
 
     li {
       flex-shrink: 0;
+
+      &:nth-child(odd){
+        transform: scale(.8);
+      }
     }
 
     h4 {

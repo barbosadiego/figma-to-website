@@ -28,7 +28,24 @@ p {
   color: #414141;
 }
 
+.btn {
+  display: inline-block;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-size: rem(14);
+  font-weight: 500;
+  line-height: 2.3;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  text-transform: capitalize;
 
+  &:hover {
+    background-color: #fff;
+    color: #4a4a4a;
+    border-color: #4a4a4a;
+  }
+}
 
 img {
   max-width: 100%;
@@ -36,14 +53,14 @@ img {
   height: auto;
 }
 
-.container{
+.container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
