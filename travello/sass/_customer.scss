@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins-functions';
+
+.customer{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 128px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  @include device(tablet){
+    padding-bottom: 64px;
+    gap: 40px;
+  }
+  @include device(mobile){
+    grid-template-columns: 1fr;
+  }
+
+  &__text{
+    display: grid;
+    justify-items: start;
+
+    .title{
+      color: $color1;
+      font-size: rem(18);
+      font-weight: 500;
+      line-height: rem(24);
+      text-transform: capitalize;
+    }
+
+    h2{
+      margin-bottom: 20px;
+    }
+
+    p{
+      margin-bottom: 10px;
+      @include device(tablet){
+        font-size: rem(15);
+        max-width: 50ch;
+      }
+    }
+  }
+
+  img{
+    padding: 10px;
+    border: 2px solid $color3;
+    object-fit: cover;
+  }
+}

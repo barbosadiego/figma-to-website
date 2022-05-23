@@ -37,6 +37,10 @@
   &__box {
     position: relative;
     overflow: hidden;
+    @include device(tablet){
+      width: 280px;
+      height: 280px;
+    }
 
     img {
       object-fit: cover;
