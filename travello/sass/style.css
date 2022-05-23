@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title1 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.title2 {
+  font-size: 2.8125rem;
+  font-weight: 500;
+  line-height: 3.75rem;
+}
+
+.flex {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

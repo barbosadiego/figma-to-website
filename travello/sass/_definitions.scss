@@ -1,0 +1,86 @@
+// variables
+
+$color1: #2094e6;
+$color2: #394d52;
+$color3: #e3dec1;
+$color4: #20b7b3;
+
+// mixins
+
+@mixin device($device) {
+  @if device == tablet {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin device($device) {
+  @if device == mobile {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+// function
+
+@function rem($pixels){
+  $result: ($pixels / 16) * 1rem;
+  @return $result;
+}
+
+// css reset
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title1{
+  font-size: rem(60);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.title2{
+  font-size: rem(45);
+  font-weight: 500;
+  line-height: rem(60);
+}
+
+.flex{
+  display: flex;
+} 
