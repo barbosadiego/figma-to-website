@@ -9,6 +9,7 @@
   background-blend-mode: overlay;
   background-position-y: center;
   padding: 0 20px;
+  margin-bottom: 128px;
   @include device(tablet){
     background-position: right 35% bottom 45%;
   }

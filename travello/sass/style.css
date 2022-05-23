@@ -94,6 +94,7 @@ img {
   background-blend-mode: overlay;
   background-position-y: center;
   padding: 0 20px;
+  margin-bottom: 128px;
 }
 @media screen and (max-width: 950px) {
   .header {
@@ -217,6 +218,35 @@ img {
   justify-items: start;
   gap: 24px;
   color: #fff;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  padding-bottom: 256px;
+}
+.about__image {
+  position: relative;
+}
+.about__image img:first-child {
+  border: 2px solid #e3dec1;
+  padding: 10px;
+}
+.about__image img:last-child {
+  position: absolute;
+  bottom: -130px;
+  right: 60px;
+}
+.about__text {
+  display: grid;
+  justify-items: start;
+}
+.about__text h3 {
+  color: #2094e6;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */

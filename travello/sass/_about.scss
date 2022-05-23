@@ -1,0 +1,36 @@
+@import 'mixins-functions';
+@import 'variables';
+
+.about{
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  padding-bottom: 256px;
+  
+  &__image{
+    position: relative;
+    
+    & img:first-child{
+      border: 2px solid $color3;
+      padding: 10px;
+    }
+
+    & img:last-child{
+      position: absolute;
+      bottom: -130px;
+      right: 60px;
+    }
+  }
+
+  &__text{
+    display: grid;
+    justify-items: start;
+
+    h3{
+      color: $color1;
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: rem(24);
+      text-transform: capitalize;
+    }
+  }
+}
