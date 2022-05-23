@@ -1,0 +1,88 @@
+@import 'mixins-functions';
+@import 'variables';
+
+.explore {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 128px;
+  @include device(tablet) {
+    padding-bottom: 64px;
+  }
+
+  span {
+    display: block;
+    font-style: rem(24);
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: center;
+    color: $color1;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @include device(tablet) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__box {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+
+    .text {
+      padding: 30px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      text-align: center;
+      color: #fff;
+      transform: translateY(200%);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+      @include device(tablet) {
+        transform: translateY(0%);
+        backdrop-filter: blur(2px);
+
+      }
+
+      h4 {
+        font-size: rem(24);
+        font-weight: 500;
+        line-height: rem(32);
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+
+    &:hover {
+      .text {
+        transform: translateY(0%);
+        @media screen and (min-width: 951px) {
+          backdrop-filter: blur(5px);
+        }
+      }
+    }
+  }
+}

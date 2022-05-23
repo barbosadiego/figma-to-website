@@ -69,6 +69,10 @@ img {
   margin: 0 auto;
 }
 
+.title {
+  font-family: "Playfair Display", serif;
+}
+
 .title1 {
   font-size: 3.75rem;
   font-weight: 600;
@@ -328,6 +332,88 @@ img {
 .aside__box p {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.explore {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 128px;
+}
+@media screen and (max-width: 950px) {
+  .explore {
+    padding-bottom: 64px;
+  }
+}
+.explore span {
+  display: block;
+  font-style: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  color: #2094e6;
+}
+.explore h2 {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.explore__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 950px) {
+  .explore__options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.explore__box {
+  position: relative;
+  overflow: hidden;
+}
+.explore__box img {
+  object-fit: cover;
+}
+.explore__box .text {
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+  transform: translateY(200%);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+@media screen and (max-width: 950px) {
+  .explore__box .text {
+    transform: translateY(0%);
+    backdrop-filter: blur(2px);
+  }
+}
+.explore__box .text h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-bottom: 15px;
+}
+.explore__box .text p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.explore__box:hover .text {
+  transform: translateY(0%);
+}
+@media screen and (min-width: 951px) {
+  .explore__box:hover .text {
+    backdrop-filter: blur(5px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
