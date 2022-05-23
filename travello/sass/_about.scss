@@ -1,10 +1,17 @@
 @import 'mixins-functions';
 @import 'variables';
 
+
 .about{
   display: grid;
   grid-template-columns: 7fr 5fr;
   padding-bottom: 256px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and(max-width:1100px) {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
   
   &__image{
     position: relative;
@@ -12,18 +19,34 @@
     & img:first-child{
       border: 2px solid $color3;
       padding: 10px;
+      object-fit: cover;
     }
 
     & img:last-child{
       position: absolute;
       bottom: -130px;
       right: 60px;
+      @media screen and(max-width:1100px) {
+        bottom: -30px;
+        right: 10%;
+      }
+      @include device(mobile){
+        display: none;
+      }
     }
   }
-
+ 
   &__text{
     display: grid;
     justify-items: start;
+    gap: 10px;
+    max-width: 50ch;
+    @media screen and(max-width:1100px) {
+      justify-self: center;
+    }
+    @include device(mobile){
+      grid-row: 1;
+    }
 
     h3{
       color: $color1;
