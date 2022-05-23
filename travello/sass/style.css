@@ -236,15 +236,22 @@ img {
   .about {
     grid-template-columns: 1fr;
     gap: 80px;
+    padding-bottom: 64px;
   }
 }
 .about__image {
   position: relative;
 }
+@media screen and (max-width: 750px) {
+  .about__image {
+    margin: 0 auto;
+  }
+}
 .about__image img:first-child {
   border: 2px solid #e3dec1;
   padding: 10px;
   object-fit: cover;
+  object-position: left;
 }
 .about__image img:last-child {
   position: absolute;
@@ -284,6 +291,43 @@ img {
   font-size: 1.125rem;
   line-height: 1.5rem;
   text-transform: capitalize;
+}
+
+.aside {
+  padding-bottom: 128px;
+}
+@media screen and (max-width: 950px) {
+  .aside {
+    padding-bottom: 64px;
+  }
+}
+.aside .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 20px;
+}
+@media screen and (max-width: 950px) {
+  .aside .container {
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  }
+}
+.aside__box {
+  padding: 30px;
+  display: grid;
+  gap: 15px;
+  box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+}
+.aside__box h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+.aside__box p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
