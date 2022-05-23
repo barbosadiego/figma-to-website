@@ -1,0 +1,128 @@
+@import 'mixins-functions';
+@import 'variables';
+
+.header {
+  background-image: url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  background-blend-mode: overlay;
+  background-position-y: center;
+  padding: 0 20px;
+  @include device(tablet){
+    background-position: right 35% bottom 45%;
+  }
+
+  &__menu {
+    height: 80px;
+    justify-content: space-between;
+  }
+
+  &__links {
+    gap: 50px;
+    @include device(tablet) {
+      gap: 20px;
+    }
+    @include device(mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      width: 100vw;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      z-index: 5;
+      transform: translateX(-100%);
+      transition: 0.3s;
+    }
+
+    &.show {
+      transform: translateX(0%);
+    }
+
+    a {
+      color: #fff;
+      text-transform: capitalize;
+      position: relative;
+      padding: 10px;
+      font-size: rem(22);
+      font-weight: 500;
+      line-height: 1;
+      @include device(tablet) {
+        font-size: rem(20);
+      }
+      @include device(mobile) {
+        font-size: rem(25);
+        color: #000;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        transition: 0.3s;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+
+      &:hover::after {
+        background-color: #fff;
+      }
+    }
+
+    & li:last-child {
+      margin-left: 80px;
+      @include device(tablet) {
+        margin-left: 0;
+      }
+      @include device(mobile) {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    @include device(mobile) {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      z-index: 10;
+
+      .line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        color: #fff;
+        background-color: #fff;
+        box-shadow: 0 10px 0 currentColor, 0 -10px 0 currentColor;
+      }
+    }
+  }
+
+  &__intro {
+    padding-top: 192px;
+    padding-bottom: 136px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include device(mobile){
+      padding-top: 50px;
+      grid-template-columns: 1fr;
+    }
+
+    div {
+      display: grid;
+      justify-items: start;
+      gap: 24px;
+      color: #fff;
+    }
+  }
+}
