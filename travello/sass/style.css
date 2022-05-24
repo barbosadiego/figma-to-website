@@ -109,6 +109,7 @@ img {
 @media screen and (max-width: 950px) {
   .header {
     background-position: right 35% bottom 45%;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 .header__menu {
@@ -206,9 +207,8 @@ img {
     display: block;
     width: 30px;
     height: 3px;
-    color: #fff;
-    background-color: #fff;
-    box-shadow: 0 10px 0 currentColor, 0 -10px 0 currentColor;
+    background-color: #e3dec1;
+    box-shadow: 0 10px 0 #e3dec1, 0 -10px 0 #e3dec1;
   }
 }
 .header__intro {
