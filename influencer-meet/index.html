@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,7 @@
       <!-- Header -->
       <div class="header__menu container flex">
         <div class="header__logo">
-          <img src="assets/icons/logo-p.svg" alt="">
+          <a href="#"><img src="assets/icons/logo-p.svg" width="111" height="24" alt=""></a>
         </div>
         <nav>
           <ul class="header__nav flex js-menu">
@@ -27,17 +27,23 @@
             <li><a href="#">speakers</a></li>
             <li><a href="#">organizers</a></li>
             <li><a href="#">sponsor</a></li>
-            <li><div class="flex buy buy-menu">buy tickets <img src="./assets/icons/arrow_right_up.svg" alt=""></div></li>
+            <li><div class="flex buy buy-menu">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8"  alt=""></div></li>
           </ul>
         </nav>
-        <div class="flex buy" id="buy">buy tickets <img src="./assets/icons/arrow_right_up.svg" alt=""></div>
+        <div class="flex buy" id="buy">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8" alt=""></div>
         <div class="mobile-menu">
           <div class="line"></div>
         </div>
       </div>
     </header> 
-    <main>
+    <main class="container hero">
       <!-- Main -->
+      <picture>
+        <source media="(max-width:650px)" srcset="assets/images/hero-mobile.png">
+        <img src="assets/images/hero.png" width="1687" height="1015" alt="Influencers Meet Tech Conference">
+      </picture>
+      <p>what is imtconf?</p>
+      <h1>We are a community of Influencers and Tech Personalities.</h1>
     </main>
     <footer>
       <!-- Footer -->

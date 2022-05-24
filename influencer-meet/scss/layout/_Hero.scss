@@ -1,0 +1,37 @@
+@import '../base/colors', '../base/functions', '../base/mixins';
+
+.hero{
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 64px;
+  @include device(desktop){
+    margin-bottom: 190px;
+  }
+
+  p{
+    font-size: rem(16);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $purple;
+    padding-bottom: 32px;
+    @include device(desktop){
+      font-size: rem(24);
+      line-height: rem(29);
+    }
+  }
+
+  h1{
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 2;
+    max-width: 20ch;
+    @include device(desktop){
+      max-width: initial;
+      font-size: rem(48);
+      line-height: 2;
+    }
+  }
+}
