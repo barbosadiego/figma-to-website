@@ -471,4 +471,36 @@ img {
   object-fit: cover;
 }
 
+.booking {
+  padding: 128px;
+  background-image: url("../img/image 6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+}
+@media screen and (max-width: 750px) {
+  .booking {
+    padding: 64px 20px;
+  }
+}
+.booking__text {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+.booking__text span {
+  color: #2094e6;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+.booking__text h2 {
+  margin-bottom: 30px;
+}
+.booking__text p {
+  max-width: 60ch;
+  margin-bottom: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
