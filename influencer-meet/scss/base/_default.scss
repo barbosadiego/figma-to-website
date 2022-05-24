@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.container{
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
