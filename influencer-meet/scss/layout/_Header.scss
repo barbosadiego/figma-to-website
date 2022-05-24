@@ -1,0 +1,86 @@
+@import '../base/colors', '../base/functions', '../base/mixins';
+
+.header {
+  padding: 12px 20px;
+  @include device(tablet){
+    padding: 24px 20px;
+    #buy{
+      display: none;
+    }
+  }
+
+  &__menu {
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  &__nav {
+    z-index: 5;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    background-color: $soft-brown;
+    width: 100vw;
+    padding: 25px 20px;
+    transform: translateY(-200%);
+    transition: .3s;
+    &.show{
+      transform: translateY(0%);
+    }
+    @include device(tablet){
+      position: initial;
+      top: unset;
+      left: unset;
+      background-color: unset;
+      width: initial;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      transform: translateY(0%);
+      padding: 0;
+    }
+
+    a{
+      display: block;
+      font-size: rem(16);
+      line-height: rem(17);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-weight: 500;
+      color: black;
+      @include device(tablet){
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .buy{
+    color: $purple;
+    text-transform: uppercase;
+    justify-content: start;
+    font-weight: 800;
+    gap: 8px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .mobile-menu{
+    display: grid;
+    place-items: center;
+    height: 28px;
+    width: 28px;
+    @include device(desktop){
+      display: none;
+    }
+    .line{
+      width: 20px;
+      height: 1px;
+      background-color: black;
+      box-shadow: 0px 5px 0 black, 0 -5px 0 black;
+    }
+  }
+
+
+}

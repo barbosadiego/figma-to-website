@@ -17,6 +17,8 @@ a {
 
 body {
   font-family: "Cabinet Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 img {
@@ -55,6 +57,92 @@ img {
 .h4 {
   font-size: 1.125rem;
   line-height: 1.5625rem;
+}
+
+.header {
+  padding: 12px 20px;
+}
+@media screen and (min-width: 786px) {
+  .header {
+    padding: 24px 20px;
+  }
+  .header #buy {
+    display: none;
+  }
+}
+.header__menu {
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+.header__nav {
+  z-index: 5;
+  flex-direction: column;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  background-color: #F6EFEC;
+  width: 100vw;
+  padding: 25px 20px;
+  transform: translateY(-200%);
+  transition: 0.3s;
+}
+.header__nav.show {
+  transform: translateY(0%);
+}
+@media screen and (min-width: 786px) {
+  .header__nav {
+    position: initial;
+    top: unset;
+    left: unset;
+    background-color: unset;
+    width: initial;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    transform: translateY(0%);
+    padding: 0;
+  }
+}
+.header__nav a {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 500;
+  color: black;
+}
+@media screen and (min-width: 786px) {
+  .header__nav a {
+    margin-bottom: 0;
+  }
+}
+.header .buy {
+  color: #7D00EB;
+  text-transform: uppercase;
+  justify-content: start;
+  font-weight: 800;
+  gap: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.header .mobile-menu {
+  display: grid;
+  place-items: center;
+  height: 28px;
+  width: 28px;
+}
+@media screen and (min-width: 1024px) {
+  .header .mobile-menu {
+    display: none;
+  }
+}
+.header .mobile-menu .line {
+  width: 20px;
+  height: 1px;
+  background-color: black;
+  box-shadow: 0px 5px 0 black, 0 -5px 0 black;
 }
 
 /*# sourceMappingURL=style.css.map */
