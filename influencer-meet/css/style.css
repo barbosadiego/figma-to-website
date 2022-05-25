@@ -289,24 +289,31 @@ img {
 .speakers {
   background-color: #F6EFEC;
   padding: 32px 20px;
+  margin-bottom: 64px;
 }
 @media screen and (min-width: 1024px) {
   .speakers {
     padding: 128px 20px;
+    margin-bottom: 128px;
   }
+}
+.speakers hr {
+  border-top: 1px solid #BF8260;
+  position: relative;
+  margin-bottom: 40px;
 }
 .speakers h2 {
   color: #BF8260;
   font-weight: 400;
   font-size: clamp(1.5rem, 5vw, 4rem);
-  max-width: 30ch;
   letter-spacing: 1px;
-  border-bottom: 1px solid #BF8260;
-  margin-bottom: 42px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media screen and (min-width: 1024px) {
   .speakers h2 {
     line-height: 1.2;
+    max-width: 25ch;
   }
 }
 .speakers h2 .style {
@@ -326,7 +333,6 @@ img {
   font-size: 1rem;
   line-height: 1.8;
   padding-bottom: 48px;
-  max-width: 35ch;
 }
 @media screen and (min-width: 1024px) {
   .speakers .text {

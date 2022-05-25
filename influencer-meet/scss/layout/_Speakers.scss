@@ -3,28 +3,41 @@
 .speakers {
   background-color: $soft-brown;
   padding: 32px 20px;
+  margin-bottom: 64px;
   @include device(desktop){
     padding: 128px 20px;
+    margin-bottom: 128px;
   }
-
+  
+  hr{
+    border-top: 1px solid $deep-brown;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
   h2 {
     color: $deep-brown;
     font-weight: 400;
     font-size: clamp(1.5rem, 5vw, 4rem);
-    max-width: 30ch;
     letter-spacing: 1px;
-    border-bottom: 1px solid $deep-brown;
-    margin-bottom: 42px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
     @include device(desktop){
       line-height: 1.2;
+      max-width: 25ch;
     }
 
     .style {
       color: $soft-brown;
-      text-shadow: 0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
-        0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
-        0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
-        0px 0px 1px $deep-brown;
+      text-shadow: 
+        0px 0px 1px $deep-brown, 
+        0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown, 
+        0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown, 
+        0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown
+      ;
       font-weight: 700;
     }
   }
@@ -42,7 +55,6 @@
     font-size: rem(16);
     line-height: 1.8;
     padding-bottom: 48px;
-    max-width: 35ch;
     @include device(desktop){
       max-width: 75ch;
     }
