@@ -3,6 +3,9 @@
 .banner {
   padding: 0 20px;
   margin-bottom: 64px;
+  @include device(desktop){
+    margin-bottom: 128px;
+  }
   
   &__text {
     display: grid;

@@ -1,0 +1,104 @@
+@import '../base/mixins', '../base/functions', '../base/colors';
+
+.speakers {
+  background-color: $soft-brown;
+  padding: 32px 20px;
+  @include device(desktop){
+    padding: 128px 20px;
+  }
+
+  h2 {
+    color: $deep-brown;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    max-width: 30ch;
+    letter-spacing: 1px;
+    border-bottom: 1px solid $deep-brown;
+    margin-bottom: 42px;
+    @include device(desktop){
+      line-height: 1.2;
+    }
+
+    .style {
+      color: $soft-brown;
+      text-shadow: 0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown, 0px 0px 1px $deep-brown,
+        0px 0px 1px $deep-brown;
+      font-weight: 700;
+    }
+  }
+
+  .call {
+    color: $deep-brown;
+    line-height: 1.8;
+    font-size: rem(18);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.8;
+    padding-bottom: 48px;
+    max-width: 35ch;
+    @include device(desktop){
+      max-width: 75ch;
+    }
+  }
+
+  &__scroll {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 40px;
+    overflow-x: auto;
+  }
+
+  &__person {
+    position: relative;
+    display: grid;
+
+    img {
+      margin-bottom: 16px;
+    }
+
+    .category {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: rem(14);
+      font-weight: 700;
+      text-transform: uppercase;
+      left: 16px;
+      top: 16px;
+      color: $white;
+      padding: 8px 20px;
+      display: grid;
+      place-items: center;
+      background-color: $purple;
+    }
+
+    &:nth-child(even) .category {
+      background-color: $orange;
+    }
+
+    p {
+      font-size: rem(14);
+      font-weight: 700;
+      line-height: 2;
+      text-transform: uppercase;
+    }
+
+    .name {
+      font-size: rem(20);
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 1.4;
+    }
+  }
+}

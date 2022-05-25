@@ -155,7 +155,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .hero {
-    margin-bottom: 190px;
+    margin-bottom: 128px;
   }
 }
 .hero p {
@@ -189,6 +189,11 @@ img {
 .banner {
   padding: 0 20px;
   margin-bottom: 64px;
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    margin-bottom: 128px;
+  }
 }
 .banner__text {
   display: grid;
@@ -279,6 +284,100 @@ img {
 }
 .banner__text > div:last-child div ul li svg path {
   fill: #fff;
+}
+
+.speakers {
+  background-color: #F6EFEC;
+  padding: 32px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .speakers {
+    padding: 128px 20px;
+  }
+}
+.speakers h2 {
+  color: #BF8260;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  max-width: 30ch;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #BF8260;
+  margin-bottom: 42px;
+}
+@media screen and (min-width: 1024px) {
+  .speakers h2 {
+    line-height: 1.2;
+  }
+}
+.speakers h2 .style {
+  color: #F6EFEC;
+  text-shadow: 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260;
+  font-weight: 700;
+}
+.speakers .call {
+  color: #BF8260;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.speakers .text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.8;
+  padding-bottom: 48px;
+  max-width: 35ch;
+}
+@media screen and (min-width: 1024px) {
+  .speakers .text {
+    max-width: 75ch;
+  }
+}
+.speakers__scroll {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 40px;
+  overflow-x: auto;
+}
+.speakers__person {
+  position: relative;
+  display: grid;
+}
+.speakers__person img {
+  margin-bottom: 16px;
+}
+.speakers__person .category {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  left: 16px;
+  top: 16px;
+  color: #fff;
+  padding: 8px 20px;
+  display: grid;
+  place-items: center;
+  background-color: #7D00EB;
+}
+.speakers__person:nth-child(even) .category {
+  background-color: #F3A100;
+}
+.speakers__person p {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.speakers__person .name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2;
+}
+.speakers__person h4 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 /*# sourceMappingURL=style.css.map */
