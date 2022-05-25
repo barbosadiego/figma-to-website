@@ -1,57 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="desciption" content="Influencers meeting" />
-    <meta name="keywords" content="Enter keywords here" />
-    <!-- Social Media Meta tags -->
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <title>Influencers Meet Tech</title>
-    <link href="https://api.fontshare.com/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-  </head>
-  <body>
-    <header class="header">
-      <!-- Header -->
-      <div class="header__menu container flex">
-        <div class="header__logo">
-          <a href="#"><img src="assets/icons/logo-p.svg" width="111" height="24" alt=""></a>
-        </div>
-        <nav>
-          <ul class="header__nav flex js-menu">
-            <li><a href="#">about</a></li>
-            <li><a href="#">speakers</a></li>
-            <li><a href="#">organizers</a></li>
-            <li><a href="#">sponsor</a></li>
-            <li><div class="flex buy buy-menu">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8"  alt=""></div></li>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="desciption" content="Influencers meeting" />
+  <meta name="keywords" content="Enter keywords here" />
+  <!-- Social Media Meta tags -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <title>Influencers Meet Tech</title>
+  <link href="https://api.fontshare.com/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- Header -->
+    <div class="header__menu container flex">
+      <div class="header__logo">
+        <a href="#"><img src="assets/icons/logo-p.svg" width="111" height="24" alt=""></a>
+      </div>
+      <nav>
+        <ul class="header__nav flex js-menu">
+          <li><a href="#">about</a></li>
+          <li><a href="#">speakers</a></li>
+          <li><a href="#">organizers</a></li>
+          <li><a href="#">sponsor</a></li>
+          <li>
+            <div class="flex buy buy-menu">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8" alt=""></div>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex buy" id="buy">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8" alt=""></div>
+      <div class="mobile-menu">
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <!-- Main -->
+    <picture>
+      <source media="(max-width:650px)" srcset="assets/images/hero-mobile.png">
+      <img src="assets/images/hero.png" width="1687" height="1015" alt="Influencers Meet Tech Conference">
+    </picture>
+    <p>what is imtconf?</p>
+    <h1>We are a community of Influencers and Tech Personalities.</h1>
+  </main>
+
+  <section class="banner">
+    <div class="banner__text container">
+      <div>
+        <h3>humam-centered community</h3>
+        <h2>we are <span>designers</span></h2>
+      </div>
+      <div>
+        <p>A community of Influencers and Tech Personalities forging a stage where the continent’s brightest minds meet new partners, and, the sharpest innovators to share their visions.</p>
+        <div class="banner__links">
+          <img src="./assets/icons/logo-w.svg" width="111" height="24" alt="Influencers Tech Conference logo">
+          <ul>
+            <li>
+
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6957 16.0982C19.3934 16.1569 18.2646 16.4754 17.3532 17.383C16.4385 18.2953 16.1241 19.4285 16.0652 20.7172C16.0286 21.5216 15.8145 27.5985 16.4354 29.1922C16.8541 30.2674 17.6788 31.094 18.7638 31.5141C19.27 31.711 19.8479 31.8444 20.6957 31.8833C27.7844 32.2041 30.4121 32.0294 31.5201 29.1922C31.7168 28.6872 31.8521 28.1099 31.8895 27.2642C32.2135 20.1574 31.837 18.6169 30.6015 17.383C29.6216 16.4055 28.469 15.7401 20.6957 16.0982ZM20.7609 30.4546C19.9847 30.4197 19.5636 30.2902 19.2826 30.1815C18.5758 29.9067 18.0448 29.3779 17.7718 28.6751C17.2989 27.4642 17.4557 21.7128 17.4979 20.7822C17.5393 19.8706 17.724 19.0376 18.3672 18.3944C19.1632 17.6004 20.1917 17.2113 27.1944 17.5273C28.1082 17.5686 28.9433 17.7528 29.588 18.3944C30.3841 19.1885 30.7789 20.2247 30.4573 27.2006C30.4223 27.9748 30.2925 28.3948 30.1835 28.6751C29.4631 30.5213 27.8057 30.7778 20.7609 30.4546ZM27.2719 19.7524C27.2719 20.278 27.6993 20.7052 28.2271 20.7052C28.7549 20.7052 29.1831 20.278 29.1831 19.7524C29.1831 19.2267 28.7549 18.7995 28.2271 18.7995C27.6993 18.7995 27.2719 19.2267 27.2719 19.7524ZM19.8901 23.9902C19.8901 26.2422 21.7202 28.0677 23.9777 28.0677C26.2353 28.0677 28.0653 26.2422 28.0653 23.9902C28.0653 21.7383 26.2353 19.9135 23.9777 19.9135C21.7202 19.9135 19.8901 21.7383 19.8901 23.9902ZM21.3245 23.9903C21.3245 22.5293 22.5122 21.3438 23.9776 21.3438C25.4431 21.3438 26.6308 22.5293 26.6308 23.9903C26.6308 25.4522 25.4431 26.6377 23.9776 26.6377C22.5122 26.6377 21.3245 25.4522 21.3245 23.9903Z" fill="#7D00EB" />
+              </svg>
+
+            </li>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.0002 32H28.8002V26.4007C28.8002 24.8647 28.1226 24.0079 26.9074 24.0079C25.585 24.0079 24.8002 24.9007 24.8002 26.4007V32H21.6001V21.5999H24.8002V22.7695C24.8002 22.7695 25.8042 21.0079 28.0666 21.0079C30.3298 21.0079 32.0002 22.3887 32.0002 25.2463C32.0002 28.1031 32.0002 32 32.0002 32ZM17.9536 19.9368C16.8744 19.9368 16 19.0552 16 17.968C16 16.8816 16.8744 16 17.9536 16C19.032 16 19.9064 16.8816 19.9064 17.968C19.9072 19.0552 19.032 19.9368 17.9536 19.9368ZM16 31.9999H20V21.5998H16V31.9999Z" fill="#7D00EB" />
+              </svg>
+
+
+            </li>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.032 30C27.0696 30 30.372 25.3827 30.372 21.3791C30.372 21.2477 30.372 21.117 30.3624 20.987C31.0048 20.5587 31.5592 20.0271 32 19.4186C31.4016 19.6638 30.7656 19.8247 30.1152 19.8956C30.8 19.5168 31.3128 18.9217 31.5584 18.2195C30.9136 18.5724 30.2088 18.8213 29.4736 18.9549C28.2304 17.7351 26.1512 17.676 24.8288 18.8235C23.9768 19.5634 23.6144 20.6665 23.8792 21.7188C21.24 21.5962 18.7808 20.4457 17.1136 18.5532C16.2424 19.9377 16.688 21.7084 18.1304 22.5975C17.608 22.5834 17.0968 22.4535 16.64 22.2187V22.2571C16.6408 23.6992 17.7424 24.9412 19.2736 25.2269C18.7904 25.3488 18.2832 25.3665 17.792 25.2786C18.2216 26.5132 19.4544 27.3587 20.8584 27.3831C19.696 28.2263 18.26 28.6842 16.7816 28.6827C16.5208 28.6819 16.26 28.6679 16 28.6391C17.5016 29.5282 19.248 30 21.032 29.9978" fill="#7D00EB" />
+              </svg>
+
+            </li>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.3996 20.6802L23.9996 25.8333L17.5996 20.6728V20.4668H30.3996V20.6802ZM17.5996 28.5336V22.6266L23.9996 27.7856L30.3996 22.6325V28.5336H17.5996ZM16 30H32V19H16V30Z" fill="#7D00EB" />
+              </svg>
+
+            </li>
           </ul>
-        </nav>
-        <div class="flex buy" id="buy">buy tickets <img src="./assets/icons/arrow_right_up.svg" width="8" height="8" alt=""></div>
-        <div class="mobile-menu">
-          <div class="line"></div>
         </div>
       </div>
-    </header> 
-    <main class="container hero">
-      <!-- Main -->
-      <picture>
-        <source media="(max-width:650px)" srcset="assets/images/hero-mobile.png">
-        <img src="assets/images/hero.png" width="1687" height="1015" alt="Influencers Meet Tech Conference">
-      </picture>
-      <p>what is imtconf?</p>
-      <h1>We are a community of Influencers and Tech Personalities.</h1>
-    </main>
-    <footer>
-      <!-- Footer -->
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Footer -->
+  </footer>
+</body>
+
 </html>
 <script src="js/main.js" defer></script>
-<script
-  defer
-  src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
