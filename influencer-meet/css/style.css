@@ -384,6 +384,11 @@ img {
 .organizers {
   margin-bottom: 64px;
 }
+@media screen and (min-width: 1024px) {
+  .organizers {
+    margin-bottom: 128px;
+  }
+}
 .organizers .container {
   display: grid;
 }
@@ -511,6 +516,78 @@ img {
 @media screen and (min-width: 768px) {
   .organizers .bottom-link {
     display: none;
+  }
+}
+
+.sponsor {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 64px;
+  padding: 0 20px;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .sponsor {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sponsor {
+    margin-bottom: 128px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .sponsor {
+    padding: 0;
+  }
+}
+.sponsor__text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .sponsor__text h2 {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sponsor__text h2 {
+    font-size: 3.9375rem;
+  }
+}
+.sponsor__text p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .sponsor__text p {
+    font-size: 1.5rem;
+  }
+}
+.sponsor__text .link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1024px) {
+  .sponsor__text .link {
+    font-size: 1.5rem;
+  }
+}
+.sponsor__grid {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .sponsor__grid {
+    justify-self: end;
   }
 }
 

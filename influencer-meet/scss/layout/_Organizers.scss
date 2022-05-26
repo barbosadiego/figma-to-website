@@ -2,6 +2,9 @@
 
 .organizers {
   margin-bottom: 64px;
+  @include device(desktop){
+    margin-bottom: 128px;
+  }
 
   .container {
     display: grid;

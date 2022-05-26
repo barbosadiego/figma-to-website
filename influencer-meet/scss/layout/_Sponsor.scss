@@ -1,0 +1,62 @@
+@import '../base/mixins', '../base/functions', '../base/colors';
+
+.sponsor {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 64px;
+  padding: 0 20px;
+  gap: 30px;
+  @include device(tablet){
+    grid-template-columns: 1fr 1.5fr;
+  }
+  @include device(desktop) {
+    margin-bottom: 128px;
+  }
+  @media screen and (min-width:1300px) {
+    padding: 0;
+  }
+  &__text {
+    h2 {
+      font-size: rem(32);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      @include device(tablet){
+        margin-top: 50px;
+      }
+      @include device(desktop){
+        font-size: rem(63);
+      }
+    }
+
+    p{
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 8px;
+      @include device(desktop){
+        font-size: rem(24);
+      }
+    }
+
+    .link{
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      text-decoration: underline;
+      @include device(desktop){
+        font-size: rem(24);
+      }
+    }
+  }
+
+  &__grid {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    gap: 10px;
+    @include device(tablet){
+      justify-self: end;
+    }
+  }
+}
