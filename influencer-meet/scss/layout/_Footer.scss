@@ -1,0 +1,98 @@
+@import '../base/colors', '../base/mixins', '../base/functions';
+
+.footer {
+  padding: 64px 20px 0px;
+  background-color: $soft-brown;
+  
+  .container{
+    position: relative;
+    @include device(tablet){
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  span {
+    display: block;
+    font-size: rem(16);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 2;
+    margin-bottom: 8px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a {
+      font-size: rem(24);
+      font-weight: 700;
+      line-height: 2;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: 2;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+  }
+
+  &__links {
+    margin-bottom: 30px;
+
+    li {
+      a {
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 2;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+  p:not(.copy){
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .circular{
+    margin-bottom: 32px;
+    @include device(tablet){
+      align-self: end;
+    }
+  }
+
+  &__social{
+    display: flex;
+    transform: translateX(-15px);
+    @include device(tablet){
+      align-self: center;
+    }
+    @include device(desktop){
+      position: absolute;
+      bottom: 90px;
+      right: -30px;
+    }
+  }
+
+  .copy{
+    padding: 20px 0;
+    @include device(tablet){
+      align-self: center;
+    }
+    @include device(desktop){
+      justify-self: end;
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+  }
+}
