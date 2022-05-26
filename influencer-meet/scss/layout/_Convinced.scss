@@ -6,11 +6,27 @@
   display: grid;
   gap: 8px;
   text-align: center;
+  @include device(tablet){
+    grid-template-columns: repeat(2,1fr);
+    gap: 0 50px;
+  }
+  @include device(desktop){
+    gap: 0 80px;
+    text-align: left;
+    margin-bottom: 128px;
+  }
 
   h2 {
     font-size: rem(32);
     font-weight: 700;
     line-height: 1.2;
+    @include device(tablet){
+      grid-column: 1/-1;
+    }
+    @include device(desktop){
+      text-align: center;
+      font-size: rem(64);
+    }
   }
 
   p {
@@ -21,12 +37,24 @@
 
   & > p{
     margin-bottom: 22px;
+    @include device(tablet){
+      grid-column: 1/-1;
+    }
+    @include device(desktop){
+      text-align: center;
+      font-size: rem(24);
+      margin-bottom: 64px;
+    }
   }
 
   &__box {
     display: grid;
     gap: 10px;
     padding: 30px 10px;
+    @include device(desktop){
+      justify-content: start;
+      padding: 72px;
+    }
 
     p,
     span {
@@ -34,15 +62,22 @@
       font-size: rem(30);
       font-weight: 700;
       line-height: 1.2;
+      @include device(desktop){
+        font-size: rem(40);
+      }
     }
 
     span {
       display: block;
       font-size: rem(32);
+      @include device(desktop){
+        font-size: rem(64);
+      }
     }
 
     li {
       display: flex;
+      align-items: center;
       justify-content: center;
       gap: 5px;
       font-size: rem(16);
@@ -64,6 +99,10 @@
       line-height: 1.2;
       text-transform: uppercase;
       text-decoration: underline;
+      margin-top: 32px;
+      @include device(desktop){
+        justify-content: start;
+      }
 
       img{
         width: 15px;
@@ -107,6 +146,16 @@
           0 0 1px black,
           0 0 1px black,
         ;
+      }
+
+      li:nth-child(n + 5){
+        color: rgba($color: #267a96, $alpha: .5);
+
+        svg{
+          path{
+            fill:#267a9650
+          }
+        }
       }
 
       .link a{

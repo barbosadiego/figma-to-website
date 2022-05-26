@@ -598,10 +598,34 @@ img {
   gap: 8px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .convinced {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .convinced {
+    gap: 0 80px;
+    text-align: left;
+    margin-bottom: 128px;
+  }
+}
 .convinced h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .convinced h2 {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .convinced h2 {
+    text-align: center;
+    font-size: 4rem;
+  }
 }
 .convinced p {
   font-size: 1rem;
@@ -611,10 +635,28 @@ img {
 .convinced > p {
   margin-bottom: 22px;
 }
+@media screen and (min-width: 768px) {
+  .convinced > p {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .convinced > p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 64px;
+  }
+}
 .convinced__box {
   display: grid;
   gap: 10px;
   padding: 30px 10px;
+}
+@media screen and (min-width: 1024px) {
+  .convinced__box {
+    justify-content: start;
+    padding: 72px;
+  }
 }
 .convinced__box p,
 .convinced__box span {
@@ -623,12 +665,24 @@ img {
   font-weight: 700;
   line-height: 1.2;
 }
+@media screen and (min-width: 1024px) {
+  .convinced__box p,
+.convinced__box span {
+    font-size: 2.5rem;
+  }
+}
 .convinced__box span {
   display: block;
   font-size: 2rem;
 }
+@media screen and (min-width: 1024px) {
+  .convinced__box span {
+    font-size: 4rem;
+  }
+}
 .convinced__box li {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 5px;
   font-size: 1rem;
@@ -648,6 +702,12 @@ img {
   line-height: 1.2;
   text-transform: uppercase;
   text-decoration: underline;
+  margin-top: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .convinced__box .link {
+    justify-content: start;
+  }
 }
 .convinced__box .link img {
   width: 15px;
@@ -673,6 +733,12 @@ img {
 .convinced__box:nth-of-type(2) .style {
   color: #EAF0F2;
   text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+.convinced__box:nth-of-type(2) li:nth-child(n+5) {
+  color: rgba(38, 122, 150, 0.5);
+}
+.convinced__box:nth-of-type(2) li:nth-child(n+5) svg path {
+  fill: #267a9650;
 }
 .convinced__box:nth-of-type(2) .link a {
   color: #267A96;
