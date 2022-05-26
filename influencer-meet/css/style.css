@@ -325,6 +325,21 @@ img {
   text-shadow: 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260, 0px 0px 1px #BF8260;
   font-weight: 700;
 }
+.speakers .arrow img {
+  position: relative;
+  transform: rotate(90deg);
+  margin-bottom: 10px;
+  margin-left: 10px;
+  animation: moveRight 1s infinite;
+}
+@keyframes moveRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 20px;
+  }
+}
 .speakers .call {
   color: #BF8260;
   line-height: 1.8;
@@ -344,14 +359,22 @@ img {
   }
 }
 .speakers__scroll {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   overflow-x: auto;
 }
 .speakers__person {
+  flex-shrink: 0;
+  width: 250px;
   position: relative;
   display: grid;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .speakers__person {
+    width: 280px;
+  }
 }
 .speakers__person img {
   margin-bottom: 16px;

@@ -5,5 +5,4 @@ export default function menuMobile(){
   const showMenu = () => menu.classList.toggle('show')
 
   menuBtn.addEventListener('click', showMenu)
-  console.log(menu)
 }
