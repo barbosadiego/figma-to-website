@@ -2,6 +2,11 @@
 
 .header {
   padding: 20px;
+  position: fixed;
+  top: 0;
+  background-color: $white;
+  width: 100%;
+  z-index: 1000;
   @include device(tablet){
     padding: 24px 20px;
     #buy{
@@ -12,14 +17,12 @@
   &__menu {
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
   }
 
   &__nav {
-    z-index: 5;
     flex-direction: column;
     position: fixed;
-    top: 48px;
+    top: 68px;
     left: 0;
     background-color: $soft-brown;
     width: 100vw;
@@ -71,7 +74,7 @@
     place-items: center;
     height: 28px;
     width: 28px;
-    @include device(desktop){
+    @include device(tablet){
       display: none;
     }
     .line{
