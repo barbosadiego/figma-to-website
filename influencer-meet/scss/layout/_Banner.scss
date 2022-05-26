@@ -61,9 +61,6 @@
       padding: 16px;
       background-color: $purple;
       color: $white;
-      @include device(tablet){
-        padding: 40px;
-      }
       @include device(desktop){
         padding: 80px 50px;
       }

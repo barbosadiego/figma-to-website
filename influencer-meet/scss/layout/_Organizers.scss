@@ -5,6 +5,12 @@
 
   .container {
     display: grid;
+    @include device(tablet){
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width:1150px) {
+      gap: 200px;
+    }
   }
 
   &__box {
@@ -12,32 +18,44 @@
     gap: 16px;
     padding: 20px;
 
+    &:nth-child(1){
+      @include device(tablet){
+        background-color: $blue-pastel;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    
     &:nth-child(2) {
       background-color: $blue-pastel;
+      @include device(tablet){
+        background-color: initial;
+      }
     }
 
     h2 {
+      position: relative;
       font-weight: 500;
       font-size: rem(24);
       line-height: 1.2;
       text-transform: capitalize;
-      position: relative;
+      @include device(tablet){
+        font-size: rem(44);
+      }
+      @include device(desktop){
+        font-size: rem(64);
+      }
 
       strong {
         font-size: rem(32);
         font-weight: 700;
-      }
-
-      &::after {
-        content: '';
-        display: inline-block;
-        width: 77px;
-        height: 40px;
-        top: 0;
-        right: 0;
-        background-image: url(../../assets/icons/arrow_down.svg);
-        background-size: contain;
-        background-position: center;
+        @include device(tablet){
+          font-size: rem(58);
+        }
+        @include device(desktop){
+          font-size: rem(88);
+        }
       }
     }
 
@@ -102,9 +120,15 @@
 
   .read-link {
     display: none;
+    @include device(tablet){
+      display: flex;
+    }
   }
 
   .bottom-link {
     padding: 10px 20px 0;
+    @include device(tablet){
+      display: none;
+    }
   }
 }
