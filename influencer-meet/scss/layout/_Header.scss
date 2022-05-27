@@ -74,6 +74,7 @@
     place-items: center;
     height: 28px;
     width: 28px;
+    cursor: pointer;
     @include device(tablet){
       display: none;
     }

@@ -136,6 +136,7 @@ img {
   place-items: center;
   height: 28px;
   width: 28px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .header .mobile-menu {
@@ -328,16 +329,11 @@ img {
 .speakers .arrow img {
   position: relative;
   transform: rotate(90deg);
-  margin-bottom: 10px;
-  margin-left: 10px;
-  animation: moveRight 1s infinite;
+  animation: moveRight 1s infinite alternate-reverse;
 }
 @keyframes moveRight {
-  from {
-    left: 0;
-  }
   to {
-    left: 20px;
+    transform: rotate(90deg) translateY(-30px);
   }
 }
 .speakers .call {
