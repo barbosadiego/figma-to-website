@@ -1,0 +1,14 @@
+[
+  {
+    "img":"./painel/img/influencers.jpg",
+    "url":"./influencer-meet/index.html"
+  },
+  {
+    "img":"./painel/img/travello.jpg",
+    "url":"./travello/index.html"
+  },
+  {
+    "img":"./painel/img/twiscode.jpg",
+    "url":"./twiscode/index.html"
+  }
+]
