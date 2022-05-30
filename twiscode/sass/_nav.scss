@@ -19,11 +19,11 @@
     @include device(tablet) {
       position: fixed;
       padding: 0;
-      top: -16px;
-      left: 0;
+      top: 0px;
+      left: 0px;
       width: 100%;
       min-height: 100vh;
-      background-color: #fff;
+      background-color: rgb(255, 255, 255);
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -80,6 +80,7 @@
       display: grid;
       place-items: center;
 
+  
       .line {
         width: 30px;
         height: 4px;
@@ -91,5 +92,3 @@
     }
   }
 }
-
-
