@@ -1,0 +1,140 @@
+@import '../base/mixins', '../base/functions';
+
+.header {
+  padding: 20px 20px 0;
+  @include device(desktop) {
+    border-bottom: 1px solid #00000020;
+    padding-bottom: 20px;
+  }
+
+  &__superior-bar {
+    @include device(desktop) {
+      max-width: 1920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+    .help,
+    .lang {
+      display: none;
+      @include device(desktop) {
+        display: flex;
+        align-items: center;
+        p,
+        a {
+          font-size: rem(12);
+        }
+      }
+    }
+
+    .help {
+      gap: 10px;
+      p {
+        line-height: 14px;
+      }
+    }
+
+    .lang {
+      div {
+        flex-direction: column;
+        margin-left: 6px;
+        p {
+          line-height: 10px;
+        }
+      }
+    }
+
+    .logo {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include device(desktop) {
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(60px);
+      }
+
+      .mobile-menu {
+        height: 30px;
+        padding: 5px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        .line {
+          display: inline-block;
+          width: 30px;
+          height: 2px;
+          background-color: black;
+          box-shadow: 0 10px 0 black, 0 -10px 0 black;
+        }
+        @include device(desktop) {
+          display: none;
+        }
+      }
+    }
+
+    .social {
+      display: none;
+      @include device(desktop) {
+        display: flex;
+        position: initial;
+        align-items: center;
+        margin-right: 45px;
+      }
+
+      li {
+        a {
+          display: block;
+          padding: 15px;
+          margin: 10px 0;
+          @include device(desktop) {
+            padding: 0 20px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  transform: translateX(-100%);
+  &.active {
+    transform: translateX(0%);
+  }
+  @include device(desktop){
+    transform: translateX(0%);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    padding: 0 20px;
+    @include device(desktop) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+      padding: 18px;
+    }
+
+    li + li {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      @include device(desktop) {
+        border-top: none;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 20px 0;
+      font-size: 1.4rem;
+      @include device(desktop) {
+        font-size: rem(18);
+        padding: 0;
+      }
+    }
+  }
+}
