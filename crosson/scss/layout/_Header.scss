@@ -100,11 +100,18 @@
 }
 
 .nav {
+  position: absolute;
+  background-color: $white;
+  width: 100vw;
+  height: 100vh;
   transform: translateX(-100%);
   &.active {
     transform: translateX(0%);
   }
   @include device(desktop){
+    position: initial;
+    height: auto;
+    width: auto;
     transform: translateX(0%);
   }
 

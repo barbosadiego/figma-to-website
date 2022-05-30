@@ -30,3 +30,33 @@ a {
   font-weight: 400;
   line-height: rem(21);
 }
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btn{
+  background-color: $yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding: 10px 25px;
+}
+
+.help{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  p{
+
+    font-size: rem(14);
+  }
+}

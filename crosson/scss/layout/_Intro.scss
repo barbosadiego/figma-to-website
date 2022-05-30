@@ -1,0 +1,92 @@
+@import '../base/colors', '../base/mixins', '../base/functions';
+
+.intro {
+  background-image: url(../assets/images/bg3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 20% top;
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
+  background-blend-mode: overlay;
+  min-height: 50vh;
+  @include device(tablet) {
+    background-color: unset;
+    background-image: url(../assets/images/bg3.jpg),
+      linear-gradient(to right, #fff, #ffffff00);
+  }
+
+  .container {
+    display: grid;
+    align-items: center;
+    min-height: 80vh;
+
+    @include device(desktop) {
+      grid-template-columns: 1fr 1fr;
+      background-position: center right;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    padding: 20px;
+    grid-column: 1/2;
+    max-width: 45ch;
+    display: grid;
+    justify-items: left;
+    gap: 20px;
+    @include device(desktop) {
+      width: 100%;
+      max-width: 100ch;
+      gap: 45px;
+    }
+
+    h1 {
+      font-size: rem(38);
+      line-height: 1.25;
+      font-weight: 700;
+      z-index: 1;
+      @include device(desktop) {
+        font-size: rem(50);
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 10px;
+          bottom: 8px;
+          background-color: $yellow;
+          display: block;
+          z-index: -1;
+        }
+      }
+    }
+
+    p {
+      max-width: 30ch;
+      @include device(desktop) {
+        max-width: 75ch;
+      }
+    }
+  }
+
+  &__cta {
+    @include device(desktop) {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .btn {
+      margin-bottom: 30px;
+      @include device(desktop) {
+        margin-bottom: 0px;
+      }
+    }
+    .help {
+      display: flex;
+    }
+  }
+}
