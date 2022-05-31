@@ -36,6 +36,13 @@ img {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-bottom: 120px;
+  }
 }
 
 .btn {
@@ -98,12 +105,15 @@ p {
   font-weight: 400;
   line-height: 1.33;
   letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .light-s {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.6;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
 }
 
 .header {
@@ -215,7 +225,7 @@ p {
   position: absolute;
   background-color: #FFFFFF;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   transform: translateX(-100%);
   z-index: 10;
   transition: 0.3s;
@@ -274,11 +284,13 @@ p {
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: overlay;
   min-height: 50vh;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .intro {
     background-color: unset;
     background-image: url(../assets/images/bg3.jpg), linear-gradient(to right, #fff, #ffffff00);
+    margin-bottom: 120px;
   }
 }
 .intro .container {
@@ -294,7 +306,6 @@ p {
   }
 }
 .intro__text {
-  padding: 20px;
   grid-column: 1/2;
   max-width: 45ch;
   display: grid;

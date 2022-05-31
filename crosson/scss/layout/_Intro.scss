@@ -8,10 +8,12 @@
   background-color: rgba($color: #ffffff, $alpha: 0.6);
   background-blend-mode: overlay;
   min-height: 50vh;
+  margin-bottom: 60px;
   @include device(tablet) {
     background-color: unset;
     background-image: url(../assets/images/bg3.jpg),
       linear-gradient(to right, #fff, #ffffff00);
+    margin-bottom: 120px;
   }
 
   .container {
@@ -27,7 +29,6 @@
   }
 
   &__text {
-    padding: 20px;
     grid-column: 1/2;
     max-width: 45ch;
     display: grid;

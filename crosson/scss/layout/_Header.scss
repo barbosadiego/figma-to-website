@@ -105,7 +105,7 @@
   position: absolute;
   background-color: $white;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   transform: translateX(-100%);
   z-index: 10;
   transition: .3s;
