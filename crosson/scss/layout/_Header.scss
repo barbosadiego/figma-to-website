@@ -57,6 +57,8 @@
       }
 
       .mobile-menu {
+        border: none;
+        background-color: transparent;
         height: 30px;
         padding: 5px;
         cursor: pointer;
@@ -105,14 +107,17 @@
   width: 100vw;
   height: 100vh;
   transform: translateX(-100%);
+  z-index: 10;
+  transition: .3s;
   &.active {
     transform: translateX(0%);
   }
-  @include device(desktop){
+  @include device(desktop) {
     position: initial;
     height: auto;
     width: auto;
     transform: translateX(0%);
+    z-index: 10;
   }
 
   ul {

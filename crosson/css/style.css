@@ -168,6 +168,8 @@ p {
   }
 }
 .header__superior-bar .logo .mobile-menu {
+  border: none;
+  background-color: transparent;
   height: 30px;
   padding: 5px;
   cursor: pointer;
@@ -215,6 +217,8 @@ p {
   width: 100vw;
   height: 100vh;
   transform: translateX(-100%);
+  z-index: 10;
+  transition: 0.3s;
 }
 .nav.active {
   transform: translateX(0%);
@@ -225,6 +229,7 @@ p {
     height: auto;
     width: auto;
     transform: translateX(0%);
+    z-index: 10;
   }
 }
 .nav ul {

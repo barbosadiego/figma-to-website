@@ -28,9 +28,9 @@
       </div>
       <div class="logo">
         <img src="assets/icons/Logo Dark.svg" width="132" height="27" alt="">
-        <div class="mobile-menu">
+        <button class="mobile-menu" id="menu-btn" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
           <div class="line"></div>
-        </div>
+        </button>
       </div>
       <ul class="social">
         <li>
@@ -58,8 +58,8 @@
       </div>
     </div>
   </header>
-  <nav class="nav">
-    <ul>
+  <nav class="nav" id="nav">
+    <ul role="menu">
       <li><a href="#">products</a></li>
       <li><a href="#">solutions</a></li>
       <li><a href="#">software</a></li>
@@ -101,7 +101,7 @@
   <!-- Footer -->
   <footer>
   </footer>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
