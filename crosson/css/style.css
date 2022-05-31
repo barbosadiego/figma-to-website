@@ -37,11 +37,11 @@ img {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1024px) {
   .container {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -70,9 +70,14 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.25;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -82,9 +87,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.33;
+  line-height: 1.13;
+}
+@media screen and (min-width: 1024px) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 1.33;
+  }
 }
 
 h5 {
@@ -101,11 +112,16 @@ p {
 }
 
 .light-p {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.33;
   letter-spacing: 0.02em;
   color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 1024px) {
+  .light-p {
+    font-size: 1.125rem;
+  }
 }
 
 .light-s {
@@ -369,6 +385,113 @@ p {
 }
 .intro__cta .help {
   display: flex;
+}
+
+.main {
+  background-image: url("../assets/images/Background (2).png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    background-size: 100% 50%;
+  }
+}
+.main .container {
+  display: grid;
+  gap: 60px;
+}
+.main .container h2 .highlight {
+  position: relative;
+  z-index: 1;
+}
+.main .container h2 .highlight::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #FCD900;
+  bottom: 5px;
+  left: 0;
+  z-index: -1;
+}
+.main__are {
+  display: grid;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .main__are {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__are {
+    grid-template-columns: 7fr 5fr;
+    gap: 100px;
+  }
+}
+.main__are .info {
+  display: grid;
+  justify-items: left;
+  gap: 20px;
+}
+.main__are .info > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main__are .info > div a {
+  text-decoration: underline;
+}
+.main__are .features {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .main__are .features {
+    align-self: end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__are .features {
+    padding-top: 50px;
+  }
+}
+.main__are .features .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.main__are .features .item h4 {
+  margin-bottom: 10px;
+}
+.main__are .features .item p {
+  max-width: 30ch;
+}
+.main__do {
+  display: grid;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .main__do {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__do {
+    grid-template-columns: 3fr 2fr;
+    gap: 100px;
+  }
+}
+.main__do .text {
+  display: grid;
+  gap: 20px;
+}
+.main__do .feature {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

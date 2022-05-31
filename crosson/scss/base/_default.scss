@@ -40,9 +40,9 @@ img{
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   @include device(desktop){
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 }
 
