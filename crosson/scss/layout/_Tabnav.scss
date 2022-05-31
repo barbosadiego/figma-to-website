@@ -1,0 +1,153 @@
+@import '../base/mixins', '../base/functions', '../base/colors';
+
+.tab-nav {
+  border-top: 1px solid #dfdfdf;
+  .container {
+    display: grid;
+    gap: 30px;
+    padding-top: 20px;
+  }
+  // seleltores estão alocados dentro de 'main'
+  &__seletors {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(62px);
+    @include device(desktop) {
+      transform: translateY(11px);
+    }
+
+    .seletor {
+      padding: 15px;
+      display: grid;
+      justify-items: center;
+      gap: 15px;
+      @include device(tablet) {
+        padding: 10px;
+      }
+      @include device(desktop) {
+        cursor: pointer;
+      }
+
+      &.active {
+        background-color: $white;
+        box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #dfdfdf;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      p {
+        display: none;
+        @include device(tablet) {
+          display: block;
+          font-size: rem(15);
+          line-height: 1.2;
+          text-align: center;
+          max-width: 15ch;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 30px;
+    @include device(desktop) {
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+    }
+    @media screen and (min-width: 1200px) {
+      gap: 100px;
+    }
+
+    .seletor-content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      h3{
+        @include device(desktop){
+          padding-top: 50px;
+        }
+      }
+
+      p {
+        padding: 20px 0;
+      }
+
+      .images {
+        display: grid;
+        justify-content: center;
+        gap: 20px;
+        @include device(tablet) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        h5 {
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    .contact {
+      display: grid;
+      gap: 20px;
+      @include device(tablet) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include device(desktop) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+      }
+
+      span {
+        display: block;
+      }
+
+      .meeting {
+        display: flex;
+        gap: 80px;
+        background-color: #fafafa;
+        padding: 10px;
+        border-bottom: 2px solid $yellow;
+        @include device(tablet) {
+          grid-column: 2/3;
+        }
+
+        .indicator {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background-color: #28cba4;
+          border-radius: 50%;
+        }
+
+        span {
+          display: block;
+          padding-bottom: 8px;
+        }
+      }
+
+      h4 {
+        @include device(tablet) {
+          grid-row: 1;
+        }
+      }
+
+      .phone,
+      .mail {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+}

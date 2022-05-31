@@ -11,6 +11,9 @@
   .container {
     display: grid;
     gap: 60px;
+    @include device(desktop){
+      padding-bottom: 10px;
+    }
 
     h2 {
       .highlight {
@@ -35,7 +38,7 @@
   &__are {
     display: grid;
     gap: 30px;
-    @include device(tablet){
+    @include device(tablet) {
       grid-template-columns: 1.5fr 1fr;
     }
     @include device(desktop) {
@@ -62,7 +65,7 @@
     .features {
       display: grid;
       gap: 20px;
-      @include device(tablet){
+      @include device(tablet) {
         align-self: end;
       }
       @include device(desktop) {
@@ -88,7 +91,7 @@
   &__do {
     display: grid;
     gap: 30px;
-    @include device(tablet){
+    @include device(tablet) {
       grid-template-columns: 2fr 1fr;
     }
     @include device(desktop) {
