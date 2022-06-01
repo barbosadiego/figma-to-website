@@ -13,6 +13,7 @@
     justify-content: space-between;
     transform: translateY(62px);
     @include device(desktop) {
+      justify-content: start;
       transform: translateY(11px);
     }
 

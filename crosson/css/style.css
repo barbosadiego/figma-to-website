@@ -514,6 +514,7 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .tab-nav__seletors {
+    justify-content: start;
     transform: translateY(11px);
   }
 }
