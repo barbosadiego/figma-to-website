@@ -1,0 +1,47 @@
+@import '../base/colors', '../base/mixins', '../base/functions';
+
+.jorney {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+
+  .container {
+    display: grid;
+    gap: 30px;
+  }
+
+  .light-s {
+    padding-top: 60px;
+    @include device(desktop){
+      padding-top: 120px;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    gap: 30px;
+    @include device(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .box {
+      display: grid;
+      gap: 10px;
+
+      p {
+        max-width: 50ch;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      height: auto;
+    }
+  }
+}

@@ -74,7 +74,7 @@ img {
     width: 100%;
     height: 5px;
     background-color: #fcd900;
-    bottom: 5px;
+    bottom: 9px;
     left: 0;
     z-index: -1;
   }
@@ -323,19 +323,21 @@ p {
   .intro {
     background-color: unset;
     background-image: url(../assets/images/bg3.jpg), linear-gradient(to right, #fff, #ffffff00);
-    margin-bottom: 120px;
   }
 }
 .intro .container {
   display: grid;
   align-items: center;
   min-height: 80vh;
+  padding-top: 60px;
 }
 @media screen and (min-width: 1024px) {
   .intro .container {
     grid-template-columns: 1fr 1fr;
     background-position: center right;
     align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 .intro__text {
@@ -663,6 +665,49 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.jorney {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+.jorney .container {
+  display: grid;
+  gap: 30px;
+}
+.jorney .light-s {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .jorney .light-s {
+    padding-top: 120px;
+  }
+}
+.jorney__boxes {
+  display: grid;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .jorney__boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.jorney__boxes .box {
+  display: grid;
+  gap: 10px;
+}
+.jorney__boxes .box p {
+  max-width: 50ch;
+}
+.jorney__boxes .box a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.jorney__boxes img {
+  object-fit: cover;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
