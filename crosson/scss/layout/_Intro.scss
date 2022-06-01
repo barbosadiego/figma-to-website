@@ -13,20 +13,24 @@
     background-color: unset;
     background-image: url(../assets/images/bg3.jpg),
       linear-gradient(to right, #fff, #ffffff00);
+    min-height: 20vh;
+  }
+
+  .container {
+    display: grid;
+    align-items: center;
+    min-height: 40vh;
+    padding-top: 60px;
+    @include device(tablet) {
+      min-height: 20vh;
     }
-    
-    .container {
-      display: grid;
+    @include device(desktop) {
+      grid-template-columns: 1fr 1fr;
+      background-position: center right;
       align-items: center;
       min-height: 80vh;
-      padding-top: 60px;
-      
-      @include device(desktop) {
-        grid-template-columns: 1fr 1fr;
-        background-position: center right;
-        align-items: center;
-        margin-bottom: 0;
-        padding-bottom: 0;
+      margin-bottom: 0px;
+      padding-bottom: 60px;
     }
   }
 
