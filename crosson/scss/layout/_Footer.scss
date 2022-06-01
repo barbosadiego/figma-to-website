@@ -2,24 +2,57 @@
 
 .footer {
   background-image: url(../assets/images/Background.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 50% 0%;
+  background-blend-mode: color;
+  border-top: 1px solid #dfdfdf;
 
   .container {
     display: grid;
     gap: 20px;
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
+    @include device(desktop) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
   }
 
   &__contacts {
     display: grid;
     gap: 20px;
+    padding-bottom: 30px;
+    @include device(tablet) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+    @include device(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: auto 200px 200px 400px;
+      align-items: flex-start;
+      padding-bottom: 70px;
+    }
+
+    h3 {
+      @include device(tablet) {
+        grid-column: 1/-1;
+      }
+      @include device(desktop) {
+        grid-column: 1;
+      }
+    }
 
     & > div {
       display: flex;
       gap: 15px;
+      justify-items: start;
+      @include device(tablet) {
+        align-items: center;
+      }
+      @include device(desktop) {
+        align-items: flex-start;
+      }
 
       div {
         display: grid;
@@ -29,9 +62,15 @@
         line-height: 1.2;
         margin: 10px 0;
       }
+    }
 
+    a {
+      font-size: rem(15);
+    }
+
+    .map {
       a {
-        font-size: rem(15);
+        text-decoration: underline;
       }
     }
   }
@@ -39,6 +78,13 @@
   &__links {
     display: grid;
     gap: 20px;
+    @include device(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include device(desktop) {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+      align-items: flex-start;
+    }
 
     h4 {
       padding-bottom: 20px;
@@ -53,6 +99,11 @@
       display: grid;
       justify-items: start;
       gap: 15px;
+      @include device(desktop) {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+      }
 
       h3 {
         font-size: rem(18);
@@ -61,17 +112,29 @@
       p {
         line-height: 1.4;
         font-size: rem(14);
+        margin: 10px 0;
       }
 
       .btn {
         font-size: rem(16);
         padding: 7px;
-        width: 60%;
+        width: 200px;
       }
     }
   }
 
   &__copy {
+    border-top: 1px solid #dfdfdf;
+    background-color: white;
+    div {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+      @include device(desktop){
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     p {
       font-size: rem(14);
       line-height: 1.2;
