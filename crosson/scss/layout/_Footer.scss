@@ -1,0 +1,80 @@
+@import '../base/colors', '../base/mixins', '../base/functions';
+
+.footer {
+  background-image: url(../assets/images/Background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+
+  .container {
+    display: grid;
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  &__contacts {
+    display: grid;
+    gap: 20px;
+
+    & > div {
+      display: flex;
+      gap: 15px;
+
+      div {
+        display: grid;
+      }
+
+      p {
+        line-height: 1.2;
+        margin: 10px 0;
+      }
+
+      a {
+        font-size: rem(15);
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 20px;
+
+    h4 {
+      padding-bottom: 20px;
+      font-size: rem(25);
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .carrer {
+      display: grid;
+      justify-items: start;
+      gap: 15px;
+
+      h3 {
+        font-size: rem(18);
+      }
+
+      p {
+        line-height: 1.4;
+        font-size: rem(14);
+      }
+
+      .btn {
+        font-size: rem(16);
+        padding: 7px;
+        width: 60%;
+      }
+    }
+  }
+
+  &__copy {
+    p {
+      font-size: rem(14);
+      line-height: 1.2;
+    }
+  }
+}

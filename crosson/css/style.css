@@ -781,4 +781,67 @@ p {
   width: 200px;
 }
 
+.footer {
+  background-image: url(../assets/images/Background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+.footer .container {
+  display: grid;
+  gap: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.footer__contacts {
+  display: grid;
+  gap: 20px;
+}
+.footer__contacts > div {
+  display: flex;
+  gap: 15px;
+}
+.footer__contacts > div div {
+  display: grid;
+}
+.footer__contacts > div p {
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.footer__contacts > div a {
+  font-size: 0.9375rem;
+}
+.footer__links {
+  display: grid;
+  gap: 20px;
+}
+.footer__links h4 {
+  padding-bottom: 20px;
+  font-size: 1.5625rem;
+}
+.footer__links li {
+  margin: 10px 0;
+}
+.footer__links .carrer {
+  display: grid;
+  justify-items: start;
+  gap: 15px;
+}
+.footer__links .carrer h3 {
+  font-size: 1.125rem;
+}
+.footer__links .carrer p {
+  line-height: 1.4;
+  font-size: 0.875rem;
+}
+.footer__links .carrer .btn {
+  font-size: 1rem;
+  padding: 7px;
+  width: 60%;
+}
+.footer__copy p {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
 /*# sourceMappingURL=style.css.map */
