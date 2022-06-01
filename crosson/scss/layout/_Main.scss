@@ -14,25 +14,6 @@
     @include device(desktop){
       padding-bottom: 10px;
     }
-
-    h2 {
-      .highlight {
-        position: relative;
-        z-index: 1;
-
-        &::after {
-          display: inline-block;
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 5px;
-          background-color: $yellow;
-          bottom: 5px;
-          left: 0;
-          z-index: -1;
-        }
-      }
-    }
   }
 
   &__are {
