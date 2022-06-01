@@ -323,21 +323,28 @@ p {
   .intro {
     background-color: unset;
     background-image: url(../assets/images/bg3.jpg), linear-gradient(to right, #fff, #ffffff00);
+    min-height: 20vh;
   }
 }
 .intro .container {
   display: grid;
   align-items: center;
-  min-height: 80vh;
+  min-height: 40vh;
   padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .intro .container {
+    min-height: 20vh;
+  }
 }
 @media screen and (min-width: 1024px) {
   .intro .container {
     grid-template-columns: 1fr 1fr;
     background-position: center right;
     align-items: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    min-height: 80vh;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
   }
 }
 .intro__text {
@@ -673,7 +680,7 @@ p {
 }
 .jorney .container {
   display: grid;
-  gap: 30px;
+  gap: 20px;
 }
 .jorney .light-s {
   padding-top: 60px;
@@ -708,6 +715,70 @@ p {
 .jorney__boxes img {
   object-fit: cover;
   height: auto;
+}
+
+.news {
+  background-image: url("../assets/images/Background1.png");
+  background-position: 30% 0%;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .news {
+    background-position: 70% 0;
+  }
+}
+.news .container {
+  display: grid;
+  gap: 20px;
+}
+.news .container h4 {
+  max-width: 75ch;
+  padding-bottom: 20px;
+}
+.news .light-s {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .news .light-s {
+    padding-top: 120px;
+  }
+}
+.news__boxes {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .news__boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+.news__boxes .box {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .news__boxes .box {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+.news__boxes .box img {
+  object-fit: cover;
+  height: auto;
+  align-self: stretch;
+}
+.news__boxes .box .text {
+  display: grid;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .news__boxes .box .text {
+    gap: 30px;
+  }
+}
+.news__boxes .box a {
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

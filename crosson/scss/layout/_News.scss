@@ -1,0 +1,63 @@
+@import '../base/mixins', '../base/colors', '../base/functions';
+
+.news {
+  background-image: url('../assets/images/Background1.png');
+  background-position: 30% 0%;
+  background-repeat: no-repeat;
+  @include device(desktop){
+    background-position: 70% 0;
+  }
+
+  .container {
+    display: grid;
+    gap: 20px;
+
+    h4{
+      max-width: 75ch;
+      padding-bottom: 20px;
+    }
+  }
+
+  .light-s {
+    padding-top: 60px;
+    @include device(desktop){
+      padding-top: 120px;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    gap: 20px;
+    @include device(tablet){
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .box {
+      display: grid;
+      gap: 20px;
+      @include device(tablet){
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      img{
+        object-fit: cover;
+        height: auto;
+        align-self: stretch;
+      }
+
+      .text{
+        display: grid;
+        gap: 10px;
+        @include device(desktop){
+          gap: 30px;
+        }
+      }
+
+      a{
+        width: 200px;
+      }
+    }
+  }
+}
