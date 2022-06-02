@@ -1,14 +1,25 @@
 .btn {
   display: flex;
   align-items: center;
-  padding: 16px 24px;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
-
-  width: 161px;
-  height: 56px;
-
-  border: 2px solid $main;
+  padding: 10px 13px;
   border-radius: 4px;
+  color: $main;
+  border: 2px solid $main;
+  // width: 161px;
+  // height: 56px;
+}
+
+.blue-btn{
+  background-color: $main;
+  color: $white;
+  transition: .3s;
+  &:hover{
+    background-color: $white;
+    color: black;
+  }
 }
 
 .grid {
@@ -26,4 +37,9 @@
 .flex {
   display: flex;
   align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
