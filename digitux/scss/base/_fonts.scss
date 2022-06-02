@@ -1,0 +1,48 @@
+@import './mixins', './functions', './colors';
+
+h1 {
+  font-size: rem(40);
+  font-weight: 700;
+  line-height: rem(61);
+  color: $text;
+  @include device(desktop) {
+    font-size: rem(48);
+    line-height: rem(82);
+  }
+}
+
+h2 {
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: rem(34);
+  color: $text;
+  @include device(desktop) {
+    font-size: rem(34);
+    line-height: rem(51);
+  }
+}
+
+h3 {
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: rem(33);
+  color: $main;
+}
+
+h4 {
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: rem(27);
+  color: $main;
+  @include device(desktop){
+    font-size: rem(22);
+    line-height: rem(38);
+  }
+}
+
+p{
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(24);
+  color: rgba(14, 14, 44, 0.6);;
+}
