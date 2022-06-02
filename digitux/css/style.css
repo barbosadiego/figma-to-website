@@ -148,41 +148,64 @@ p {
   top: 75px;
   left: 0px;
   width: 100vw;
-  min-height: calc(100vh - 75px);
-  padding: 30px 20px 0;
+  height: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  transform: translateX(-100%);
   transition: 0.3s;
+  visibility: hidden;
+  overflow-y: auto;
+  background-color: #3B71FE;
 }
 .header__menu.show {
-  transform: translateX(0px);
+  height: 100vh;
+  visibility: visible;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1024px) {
+  .header__menu.show {
+    height: initial;
+  }
 }
 @media screen and (min-width: 1024px) {
   .header__menu {
+    background-color: unset;
+    visibility: visible;
+    overflow-y: auto;
     position: initial;
     width: unset;
+    height: initial;
     min-height: unset;
     flex-direction: row;
-    transform: translateX(0);
     gap: 26px;
     padding: 0;
     flex-grow: 1;
   }
 }
+.header__menu li:first-child {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .header__menu li:first-child {
+    margin-top: 0px;
+  }
+}
 .header__menu a {
   display: block;
-  font-size: 1rem;
+  font-size: 1.375rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: rgba(14, 14, 44, 0.6);
   padding: 15px 0;
   position: relative;
   transition: 0.1s;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 1024px) {
+  .header__menu a {
+    color: rgba(14, 14, 44, 0.6);
+    font-size: 1rem;
+  }
   .header__menu a::after {
     position: absolute;
     content: "";

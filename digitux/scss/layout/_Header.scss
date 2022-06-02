@@ -28,39 +28,58 @@
     top: 75px;
     left: 0px;
     width: 100vw;
-    min-height: calc(100vh - 75px);
-    padding: 30px 20px 0;
+    height: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    transform: translateX(-100%);
     transition: 0.3s;
+    visibility: hidden;
+    overflow-y: auto;
+    background-color: $main;
     &.show {
-      transform: translateX(0px);
+      height: 100vh;
+      visibility: visible;
+      overflow-y: auto;
+      @include device(desktop){
+        height: initial;
+      }
     }
     @include device(desktop) {
+      background-color: unset;
+      visibility: visible;
+      overflow-y: auto;
       position: initial;
       width: unset;
+      height: initial;
       min-height: unset;
       flex-direction: row;
-      transform: translateX(0);
       gap: 26px;
       padding: 0;
       flex-grow: 1;
     }
 
+    & li:first-child{
+      margin-top: 30px;
+      @include device(desktop){
+        margin-top: 0px;
+      }
+    }
+
     a {
       display: block;
-      font-size: rem(16);
+      font-size: rem(22);
       font-weight: 600;
       line-height: rem(24);
-      color: rgba(14, 14, 44, 0.6);
       padding: 15px 0;
       position: relative;
       transition: 0.1s;
+      color: $white;
 
       @include device(desktop) {
+        color: rgba(14, 14, 44, 0.6);
+        font-size: rem(16);
+
         &::after {
           position: absolute;
           content: '';
