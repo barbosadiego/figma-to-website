@@ -1,0 +1,84 @@
+@import '../base/colors', '../base/mixins', '../base/functions';
+
+.hero {
+  padding: 20px;
+  @include device(desktop) {
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: 450px auto;
+    align-content: center;
+    gap: 80px;
+  }
+
+  &__intro {
+    display: grid;
+    @include device(desktop) {
+      align-items: center;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      @include device(desktop){
+        position: relative;
+
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 108px;
+          height: 461px;
+          left: -110px;
+          top: 20px;
+          background-image: url(../assets/icons/Vector\ 1.png);
+        }
+      }
+    }
+
+    .cta {
+      display: grid;
+      gap: 25px;
+      transition: .3s;
+      @include device(desktop) {
+        grid-template-columns: 1fr 1.5fr;
+      }
+
+      &:hover svg path{
+        stroke: $main;
+      }
+
+      & a:last-child {
+        gap: 8px;
+        justify-self: center;
+        font-weight: 500;
+        font-size: rem(18);
+        color: $text;
+        line-height: rem(27);
+      }
+    }
+  }
+
+  &__img {
+    display: none;
+    @include device(desktop) {
+      display: initial;
+      position: relative;
+      z-index: 1;
+
+      &::after{
+        content: '';
+        display: block;
+        width: 512px;
+        height: 512px;
+        position: absolute;
+        top: 108px;
+        right: -50px;
+        z-index: -1;
+        background-image: url(../assets/images/Titik-titik.png);
+      }
+    }
+  }
+}
