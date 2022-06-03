@@ -37,6 +37,7 @@
     visibility: hidden;
     overflow-y: auto;
     background-color: $main;
+    z-index: 10;
     &.show {
       height: 100vh;
       visibility: visible;

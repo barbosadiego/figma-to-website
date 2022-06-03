@@ -190,6 +190,7 @@ p {
   visibility: hidden;
   overflow-y: auto;
   background-color: #3B71FE;
+  z-index: 10;
 }
 .header__menu.show {
   height: 100vh;
