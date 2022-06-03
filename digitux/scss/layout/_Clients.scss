@@ -1,0 +1,27 @@
+@import "../base/colors", "../base/functions", "../base/mixins";
+
+.clients{
+  padding: 20px;
+
+  h2{
+    margin-bottom: 50px;
+    text-align: center;
+    @include device(desktop){
+      text-align: left;
+    }
+  }
+
+  ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    @include device(tablet){
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      place-items: center;
+    }
+    @include device(tablet){
+      grid-template-columns: repeat(6,1fr);
+    }
+  }
+}

@@ -261,6 +261,7 @@ p {
 .hero {
   padding: 20px;
   display: grid;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -364,6 +365,7 @@ p {
 .hero {
   padding: 20px;
   display: grid;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -461,6 +463,36 @@ p {
     background-image: url(../assets/images/Titik-titik.png);
     background-repeat: no-repeat;
     z-index: -1;
+  }
+}
+
+.clients {
+  padding: 20px;
+}
+.clients h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .clients h2 {
+    text-align: left;
+  }
+}
+.clients ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .clients ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients ul {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 

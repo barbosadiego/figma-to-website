@@ -3,6 +3,7 @@
 .hero {
   padding: 20px;
   display: grid;
+  overflow: hidden;
   @include device(tablet) {
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
