@@ -8,17 +8,25 @@
   border-radius: 4px;
   color: $main;
   border: 2px solid $main;
-  // width: 161px;
-  // height: 56px;
+  transition: 0.3s;
+  @include device(desktop) {
+    &:hover {
+      background-color: $main;
+      color: $white;
+    }
+  }
 }
 
-.blue-btn{
+.blue-btn {
   background-color: $main;
   color: $white;
-  transition: .3s;
-  &:hover{
-    background-color: $white;
-    color: $text;
+  transition: 0.3s;
+  @include device(desktop) {
+    &:hover {
+      background-color: $white;
+      border-color: $main;
+      color: $main;
+    }
   }
 }
 
@@ -41,5 +49,8 @@
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 60px auto;
+  @include device(desktop) {
+    margin: 160px auto;
+  }
 }

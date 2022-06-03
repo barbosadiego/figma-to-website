@@ -3,7 +3,7 @@
 .hero {
   padding: 20px;
   display: grid;
-  overflow: hidden;
+  margin-top: 0;
   @include device(tablet) {
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
@@ -47,15 +47,14 @@
     .cta {
       display: grid;
       gap: 25px;
-      // transition: .3s;
+      
       @include device(desktop) {
         grid-template-columns: 1fr 1.5fr;
+        & a:first-child:hover svg path {
+          stroke: $main;
+        }
       }
 
-      & a:first-child:hover svg path {
-        stroke: $text;
-        stroke-width: 1px;
-      }
 
       & a:last-child {
         gap: 8px;
