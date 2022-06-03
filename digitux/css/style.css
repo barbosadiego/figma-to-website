@@ -215,11 +215,11 @@ p {
     background-color: #3B71FE;
     transition: 0.1s;
   }
-  .header__menu a:hover {
+  .header__menu a.active, .header__menu a:hover {
     font-weight: 600;
     color: #0E0E2C;
   }
-  .header__menu a:hover::after {
+  .header__menu a.active::after, .header__menu a:hover::after {
     width: 40%;
   }
 }

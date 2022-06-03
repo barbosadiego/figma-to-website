@@ -79,7 +79,7 @@
       @include device(desktop) {
         color: rgba(14, 14, 44, 0.6);
         font-size: rem(16);
-
+        
         &::after {
           position: absolute;
           content: '';
@@ -90,6 +90,7 @@
           transition: 0.1s;
         }
 
+        &.active,
         &:hover {
           font-weight: 600;
           color: $text;
