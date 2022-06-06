@@ -1,5 +1,58 @@
 @import '../base/mixins', '../base/colors', '../base/functions';
 
-.team{
+.team {
   padding: 20px;
+  overflow: hidden;
+  @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text {
+    grid-column: 1/2;
+
+    p {
+      max-width: 40ch;
+      @include device(desktop) {
+        font-size: rem(22);
+        line-height: rem(38);
+      }
+    }
+  }
+
+  .glider-contain {
+    grid-column: 2/3;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    @include device(tablet) {
+      width: 350px;
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 267px;
+        height: 267px;
+        top: -20px;
+        right: -20%;
+        background-image: url(../assets/images/Titik-titik2.png);
+        z-index: -1;
+      }
+    }
+  }
+
+  h5 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .controls {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
 }

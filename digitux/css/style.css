@@ -288,6 +288,11 @@ p {
     gap: 80px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .hero {
+    overflow: hidden;
+  }
+}
 .hero__intro {
   display: grid;
 }
@@ -389,6 +394,11 @@ p {
     align-content: center;
     align-items: unset;
     gap: 80px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .hero {
+    overflow: hidden;
   }
 }
 .hero__intro {
@@ -582,6 +592,59 @@ p {
 
 .team {
   padding: 20px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.team .text {
+  grid-column: 1/2;
+}
+.team .text p {
+  max-width: 40ch;
+}
+@media screen and (min-width: 1024px) {
+  .team .text p {
+    font-size: 1.375rem;
+    line-height: 2.375rem;
+  }
+}
+.team .glider-contain {
+  grid-column: 2/3;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .team .glider-contain {
+    width: 350px;
+  }
+  .team .glider-contain::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 267px;
+    height: 267px;
+    top: -20px;
+    right: -20%;
+    background-image: url(../assets/images/Titik-titik2.png);
+    z-index: -1;
+  }
+}
+.team h5 {
+  margin-bottom: 16px;
+}
+.team p {
+  margin-top: 0;
+}
+.team .controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
