@@ -707,4 +707,66 @@ p {
   }
 }
 
+.testemonial {
+  background-color: rgba(160, 164, 171, 0.1);
+}
+.testemonial .container {
+  padding: 60px 20px;
+}
+.testemonial .container h2 {
+  max-width: 35ch;
+}
+@media screen and (min-width: 1024px) {
+  .testemonial .container h2 {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testemonial .glider {
+    width: 800px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testemonial .glider-track {
+    gap: 40px;
+  }
+}
+.testemonial .glider-slide p {
+  padding-bottom: 30px;
+}
+.testemonial .glider-slide div {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  justify-content: center;
+}
+.testemonial .glider-slide div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testemonial .glider-slide div div h5,
+.testemonial .glider-slide div div p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.testemonial .controls {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+.testemonial .controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.testemonial .controls .next.disabled,
+.testemonial .controls .prev.disabled {
+  opacity: 0.25;
+  color: #666;
+  cursor: default;
+}
+
 /*# sourceMappingURL=style.css.map */
