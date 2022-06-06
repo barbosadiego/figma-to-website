@@ -10,9 +10,10 @@
 
   .text {
     grid-column: 1/2;
-
+    max-width: 40ch;
+    // margin: 0 auto;
+    // text-align: center;
     p {
-      max-width: 40ch;
       @include device(desktop) {
         font-size: rem(22);
         line-height: rem(38);
@@ -38,7 +39,11 @@
         background-image: url(../assets/images/Titik-titik2.png);
         z-index: -1;
       }
+
     }
+    // .glider-slide{
+    //   align-items: center;
+    // }
   }
 
   h5 {
