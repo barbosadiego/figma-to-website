@@ -1,0 +1,103 @@
+@import '../../base/colors', '../../base/mixins', '../../base/functions';
+
+.footer {
+  background-color: rgba($color: $grey, $alpha: 0.1);
+  margin-top: 120px;
+
+  .container {
+    padding: 60px 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    @include device(desktop) {
+      grid-template-columns: 1fr 1fr 1fr 300px;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    h5 {
+      font-size: rem(18);
+      font-weight: 600;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 10ch;
+      @include device(desktop) {
+        max-width: 50ch;
+      }
+    }
+  }
+
+  &__intro {
+    .logo {
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: rem(14);
+      line-height: rem(24);
+    }
+  }
+
+  &__links,
+  &__social {
+    display: none;
+    @include device(tablet) {
+      display: initial;
+      li {
+        a {
+          display: flex;
+          gap: 8px;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    @include device(tablet) {
+      grid-row: 1;
+      grid-column: 2/3;
+    }
+    @include device(desktop) {
+      grid-column: 4/5;
+      display: grid;
+      grid-template-rows: 40px 40px auto;
+    }
+    p {
+      font-size: rem(14);
+    }
+
+    input {
+      max-width: 160px;
+      height: 48px;
+      border-radius: 4px;
+      border: 1px solid $grey;
+      padding: 5px 40px 5px 10px;
+      font-family: inherit;
+      letter-spacing: 1px;
+      background-image: url(../assets/icons/feather_send.svg);
+      background-repeat: no-repeat;
+      background-position: center right 10px;
+      @include device(desktop) {
+        max-width: unset;
+      }
+    }
+  }
+
+  .copy {
+    background-color: $text;
+    color: $white;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    @include device(desktop) {
+      text-align: left;
+      h5 {
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
