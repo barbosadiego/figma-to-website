@@ -1,0 +1,148 @@
+@import '../../base/colors', '../../base/mixins', '../../base/functions';
+
+.container {
+  padding: 0 20px;
+}
+
+.services {
+  padding: 0 20px;
+  margin-top: 30px;
+  @include device(tablet) {
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+  }
+  @include device(desktop){
+    margin-top: 60px;
+  }
+
+  h1 {
+    @include device(tablet) {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 30px 0;
+    @include device(tablet) {
+      max-width: 600px;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+
+  .cta {
+    display: grid;
+    justify-items: center;
+    gap: 25px;
+    @include device(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 43px;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .flex {
+      gap: 10px;
+    }
+  }
+}
+
+.process {
+  @include device(tablet){
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+  }
+  @include device(desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 65px;
+    column-gap: 30px;
+  }
+
+  &__intro {
+    @include device(tablet){
+      grid-column: 1/-1;
+    }
+    @include device(desktop) {
+      grid-column: 1/3;
+    }
+    h2 {
+      font-size: rem(40);
+      line-height: rem(60);
+      @include device(tablet){
+        max-width: 30ch;
+      }
+    }
+  }
+
+  & > p {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    @include device(tablet){
+      grid-column: 1/-1;
+      margin-top: 0;
+      margin-bottom: 20px;
+      max-width: 50ch;
+    }
+    @include device(desktop) {
+      grid-column: 3/5;
+      font-weight: 400;
+      margin-top: 100px;
+    }
+  }
+
+  .box {
+    margin-bottom: 50px;
+
+    @include device(desktop) {
+      // grid-column: 1/-1;
+      // display: flex;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      @include device(tablet){
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: initial;
+        gap: 0;
+      }
+    }
+
+    .number {
+      color: $main;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: 1.7;
+    }
+
+    h5 {
+      font-size: rem(22);
+      font-weight: 600;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+}
+
+.slide {
+  .glider{
+
+    &-slide{
+      // width: 350px !important;
+    }
+  }
+
+  .controls {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
