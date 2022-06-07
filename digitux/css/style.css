@@ -1074,6 +1074,37 @@ p {
   margin: 0;
 }
 
+.slide {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .slide {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slide {
+    grid-template-columns: 1fr 500px;
+  }
+  .slide::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 267px;
+    height: 267px;
+    top: -50px;
+    right: 5%;
+    background-image: url(../assets/images/Titik-titik2.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+.slide .intro p {
+  max-width: 50ch;
+}
 .slide .controls {
   margin-top: 40px;
   display: flex;

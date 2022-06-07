@@ -12,7 +12,7 @@
     display: grid;
     justify-items: center;
   }
-  @include device(desktop){
+  @include device(desktop) {
     margin-top: 60px;
   }
 
@@ -51,9 +51,9 @@
 }
 
 .process {
-  @include device(tablet){
+  @include device(tablet) {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
   @include device(desktop) {
@@ -64,7 +64,7 @@
   }
 
   &__intro {
-    @include device(tablet){
+    @include device(tablet) {
       grid-column: 1/-1;
     }
     @include device(desktop) {
@@ -73,7 +73,7 @@
     h2 {
       font-size: rem(40);
       line-height: rem(60);
-      @include device(tablet){
+      @include device(tablet) {
         max-width: 30ch;
       }
     }
@@ -82,7 +82,7 @@
   & > p {
     margin-top: 40px;
     margin-bottom: 60px;
-    @include device(tablet){
+    @include device(tablet) {
       grid-column: 1/-1;
       margin-top: 0;
       margin-bottom: 20px;
@@ -98,16 +98,11 @@
   .box {
     margin-bottom: 50px;
 
-    @include device(desktop) {
-      // grid-column: 1/-1;
-      // display: flex;
-    }
-
     & > div {
       display: flex;
       align-items: center;
       gap: 16px;
-      @include device(tablet){
+      @include device(tablet) {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: initial;
@@ -132,10 +127,33 @@
 }
 
 .slide {
-  .glider{
+  position: relative;
+  z-index: 1;
+  @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+  }
+  @include device(desktop) {
+    grid-template-columns: 1fr 500px;
 
-    &-slide{
-      // width: 350px !important;
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 267px;
+      height: 267px;
+      top: -50px;
+      right: 5%;
+      background-image: url(../assets/images/Titik-titik2.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  .intro {
+    p {
+      max-width: 50ch;
     }
   }
 
