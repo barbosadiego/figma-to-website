@@ -1,0 +1,151 @@
+@import '../../base/colors', '../../base/mixins', '../../base/functions';
+
+.projects {
+  margin-top: 30px;
+
+  @include device(tablet) {
+    .text {
+      text-align: center;
+
+      h3 {
+        margin-top: 80px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        max-width: 50ch;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .cta {
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+    margin-bottom: 80px;
+    @include device(tablet) {
+      grid-template-columns: 1fr 300px 300px 1fr;
+      justify-items: center;
+
+      & a:first-child {
+        grid-column: 2/3;
+      }
+    }
+    @include device(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__boxes {
+    grid-template-columns: repeat(2, 1fr);
+    @include device(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      width: 90%;
+      margin: 0 auto;
+
+      & > div {
+        text-align: center;
+      }
+    }
+    @include device(desktop) {
+      width: 80%;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    span {
+      font-size: rem(36);
+      font-weight: 700;
+      line-height: 1.7;
+    }
+  }
+}
+
+.main {
+  @include device(tablet) {
+    display: block;
+  }
+  .content {
+    gap: 80px;
+
+    & > div {
+      display: grid;
+      gap: 50px;
+      @include device(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .btn-outside {
+        width: 70%;
+        margin: 0 auto;
+        @include device(tablet) {
+          display: none;
+        }
+      }
+    }
+
+    & div:nth-child(2) {
+      @include device(tablet) {
+        .main__text {
+          order: 3;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 20px;
+    @include device(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .btn {
+      width: 70%;
+      margin: 0 auto;
+      display: none;
+      @include device(desktop) {
+        display: flex;
+        margin: unset;
+        width: 270px;
+      }
+    }
+  }
+}
+
+.section-btn {
+  margin-top: 80px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  @include device(tablet) {
+    width: 290px;
+  }
+}

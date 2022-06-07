@@ -1112,4 +1112,151 @@ p {
   gap: 50px;
 }
 
+.projects {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .projects .text {
+    text-align: center;
+  }
+  .projects .text h3 {
+    margin-top: 80px;
+  }
+  .projects .text h1 {
+    margin: 0;
+  }
+  .projects .text p {
+    max-width: 50ch;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+.projects .cta {
+  display: grid;
+  justify-items: center;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 768px) {
+  .projects .cta {
+    grid-template-columns: 1fr 300px 300px 1fr;
+    justify-items: center;
+  }
+  .projects .cta a:first-child {
+    grid-column: 2/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects .cta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.projects .cta .btn {
+  width: 100%;
+}
+.projects__boxes {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .projects__boxes {
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 0 auto;
+  }
+  .projects__boxes > div {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects__boxes {
+    width: 80%;
+  }
+}
+.projects__boxes h4 {
+  margin: 0;
+}
+.projects__boxes span {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: block;
+  }
+}
+.main .content {
+  gap: 80px;
+}
+.main .content > div {
+  display: grid;
+  gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .main .content > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.main .content > div .btn-outside {
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .main .content > div .btn-outside {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .content div:nth-child(2) .main__text {
+    order: 3;
+  }
+}
+.main__text {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .main__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.main__text h2 {
+  margin: 0;
+}
+.main__text h3 {
+  margin-bottom: 0;
+}
+.main__text p {
+  margin: 0;
+}
+.main__text .btn {
+  width: 70%;
+  margin: 0 auto;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .main__text .btn {
+    display: flex;
+    margin: unset;
+    width: 270px;
+  }
+}
+
+.section-btn {
+  margin-top: 80px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .section-btn {
+    width: 290px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
