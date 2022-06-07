@@ -142,6 +142,9 @@ p {
     border-color: #3B71FE;
     color: #3B71FE;
   }
+  .blue-btn:hover svg path {
+    stroke: #3B71FE;
+  }
 }
 
 .grid {
@@ -816,6 +819,7 @@ p {
     display: flex;
     gap: 8px;
     padding-top: 15px;
+    color: #0E0E2C;
   }
 }
 @media screen and (min-width: 768px) {
@@ -867,6 +871,68 @@ p {
     padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
+  }
+}
+
+.main-who {
+  margin-top: 0;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .main-who {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+.main-who h1 {
+  max-width: 30ch;
+  margin: 0 auto;
+}
+.main-who p {
+  max-width: 600px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-who .cta {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+.main-who .cta .flex {
+  gap: 10px;
+}
+
+.team-who {
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .team-who {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .team-who h2 {
+    max-width: 15ch;
+  }
+}
+.team-who .who-glider .glider-track {
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.team-who .controls {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .team-who .controls {
+    display: none;
   }
 }
 
