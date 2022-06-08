@@ -1267,4 +1267,44 @@ p {
   }
 }
 
+.form {
+  margin-top: 20px;
+}
+.form form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  margin-bottom: 10px;
+}
+.form form input {
+  display: block;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+  font-family: inherit;
+  padding: 8px 16px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+.form form textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  font-family: inherit;
+  padding: 8px 16px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+.form form .btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid #3B71FE;
+}
+
 /*# sourceMappingURL=style.css.map */

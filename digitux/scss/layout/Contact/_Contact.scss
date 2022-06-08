@@ -1,0 +1,47 @@
+@import '../../base/mixins', '../../base/colors', '../../base/functions';
+
+.form {
+  margin-top: 20px;
+
+  form {
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: rem(21);
+      margin-bottom: 10px;
+    }
+
+    input {
+      display: block;
+      height: 48px;
+      width: 100%;
+      margin-bottom: 16px;
+      font-family: inherit;
+      padding: 8px 16px;
+      border: 1px solid #767676;
+      border-radius: 4px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-bottom: 16px;
+      font-family: inherit;
+      padding: 8px 16px;
+      border: 1px solid #767676;
+      border-radius: 4px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      border: none;
+      font-family: inherit;
+      font-size: rem(14);
+      line-height: rem(21);
+      cursor: pointer;
+      margin: 0 auto;
+      border: 1px solid $main;
+    }
+  }
+}
