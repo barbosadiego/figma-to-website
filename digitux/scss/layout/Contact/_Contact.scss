@@ -1,9 +1,27 @@
 @import '../../base/mixins', '../../base/colors', '../../base/functions';
 
 .form {
-  margin-top: 20px;
+  
+  @include device(desktop) {
+    background-image: url(../assets/images/Vector\ 5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    h1, h3{
+      text-align: center;
+    }
+  }
+  
+  .container{
+    margin-top: 20px;
+  }
 
   form {
+    @include device(desktop) {
+      width: 750px;
+      margin: 0 auto;
+    }
+
     label {
       display: block;
       font-weight: 600;
@@ -47,6 +65,12 @@
 }
 
 .faq {
+  @include device(desktop){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+  }
+
   &__text {
     h2 {
       font-size: rem(40);
@@ -97,18 +121,17 @@
       color: rgba(14, 14, 44, 0.6);
       height: 0;
       transition: 0.3s;
-      
-      &.show{
+
+      &.show {
         margin-top: 20px;
-        height: 100px;
+        height: 130px;
+        @include device(tablet){
+          height: 50px;
+        }
+        @include device(desktop){
+          height: 80px;
+        }
       }
     }
   }
-
-  @keyframes rotateIcon {
-    to{
-      transform: rotate(360deg);
-    }
-  }
 }
-

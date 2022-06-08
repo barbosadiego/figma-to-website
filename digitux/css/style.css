@@ -1267,8 +1267,24 @@ p {
   }
 }
 
-.form {
+@media screen and (min-width: 1024px) {
+  .form {
+    background-image: url(../assets/images/Vector\ 5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .form h1, .form h3 {
+    text-align: center;
+  }
+}
+.form .container {
   margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .form form {
+    width: 750px;
+    margin: 0 auto;
+  }
 }
 .form form label {
   display: block;
@@ -1307,6 +1323,13 @@ p {
   border: 1px solid #3B71FE;
 }
 
+@media screen and (min-width: 1024px) {
+  .faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
 .faq__text h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1351,11 +1374,16 @@ p {
 }
 .faq__area dd.show {
   margin-top: 20px;
-  height: 100px;
+  height: 130px;
 }
-@keyframes rotateIcon {
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 768px) {
+  .faq__area dd.show {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .faq__area dd.show {
+    height: 80px;
   }
 }
 
