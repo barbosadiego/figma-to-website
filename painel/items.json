@@ -14,5 +14,9 @@
   {
     "img":"./painel/img/crosson.jpg",
     "url":"./crosson/index.html"
+  },
+  {
+    "img":"./painel/img/digitux.jpg",
+    "url":"./digitux/index.html"
   }
 ]
