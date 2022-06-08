@@ -2,14 +2,13 @@
 
 .projects {
   margin-top: 30px;
+  @include device(desktop){
+    margin-top: 60px;
+  }
 
   @include device(tablet) {
     .text {
       text-align: center;
-
-      h3 {
-        margin-top: 80px;
-      }
 
       h1 {
         margin: 0;
@@ -74,7 +73,7 @@
   }
 }
 
-.main {
+.main-project {
   @include device(tablet) {
     display: block;
   }
@@ -99,7 +98,7 @@
 
     & div:nth-child(2) {
       @include device(tablet) {
-        .main__text {
+        .main-project__text {
           order: 3;
         }
       }
