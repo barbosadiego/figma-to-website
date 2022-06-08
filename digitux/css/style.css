@@ -1307,4 +1307,56 @@ p {
   border: 1px solid #3B71FE;
 }
 
+.faq__text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-top: 16px;
+}
+.faq__text h3 {
+  margin: 0;
+}
+.faq__text p {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.faq__area div {
+  padding: 20px;
+  border: 1px solid #3B71FE;
+  border-radius: 4px;
+  margin-bottom: 35px;
+}
+.faq__area dt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq__area dt button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+.faq__area dd {
+  overflow: hidden;
+  margin-left: 0;
+  color: rgba(14, 14, 44, 0.6);
+  height: 0;
+  transition: 0.3s;
+}
+.faq__area dd.show {
+  margin-top: 20px;
+  height: 100px;
+}
+@keyframes rotateIcon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
