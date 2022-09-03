@@ -1,0 +1,14 @@
+@import 'mixins';
+.nav {
+  .menu-btn {
+    @include device(desktop) {
+      display: none;
+    }
+  }
+
+  #menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
