@@ -3,12 +3,17 @@
 @use 'variables' as v;
 
 header {
-  min-height: 100vh;
-  background-image: url(../img/mobile/menu-bg.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: v.$color-2;
+  height: 0px;
+  transition: .3s ease-in-out;
+
+  &.active {
+    background-image: url(../img/mobile/menu-bg.png);
+    min-height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: v.$color-2;
+  }
 
   .nav {
     display: flex;
@@ -24,6 +29,7 @@ header {
       align-items: center;
       border: 2px solid v.$color-5;
       border-radius: 10px;
+      cursor: pointer;
     }
 
     &__menu-btn {

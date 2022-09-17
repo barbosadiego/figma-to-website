@@ -29,8 +29,12 @@ a {
 }
 
 header {
-  min-height: 100vh;
+  height: 0px;
+  transition: 0.3s ease-in-out;
+}
+header.active {
   background-image: url(../img/mobile/menu-bg.png);
+  min-height: 100vh;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,6 +54,7 @@ header .nav__mobile-close {
   align-items: center;
   border: 2px solid #B4B4B4;
   border-radius: 10px;
+  cursor: pointer;
 }
 header .nav__menu-btn {
   border: none;

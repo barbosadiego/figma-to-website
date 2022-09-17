@@ -3,13 +3,15 @@ const closeBtn = document.querySelector('[data-close]');
 const logo = document.querySelector('[data-logo] img');
 const nav = document.querySelector('[data-nav]');
 const menuEl = document.querySelector('[data-menu]');
+const header = document.querySelector('header');
 
 // active mobile menu
 function handleMenu() {
   let state = this.getAttribute('aria-expanded') === 'false';
   this.setAttribute('aria-expanded', state);
 
-  nav.classList.toggle('active')
+  nav.classList.toggle('active');
+  header.classList.toggle('active');
 
   if(nav.classList.contains('active')){
     this.setAttribute('aria-label', 'close menu');
