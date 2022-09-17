@@ -3,9 +3,8 @@
 @use 'variables' as v;
 
 header {
-  height: 0px;
-  transition: .3s ease-in-out;
-
+  // height: 0px;
+  transition: .2s ease-in-out;
   &.active {
     background-image: url(../img/mobile/menu-bg.png);
     min-height: 100vh;
@@ -13,6 +12,10 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: v.$color-2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
   }
 
   .nav {
@@ -20,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+    z-index: 10;
 
     &__mobile-close{
       width: 36px;
