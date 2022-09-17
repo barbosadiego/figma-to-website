@@ -1,0 +1,61 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
+.about{
+  &__carossel{
+    height: 230px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    .carossel-item{
+      height: 200px;
+      position: absolute;
+      overflow: hidden;
+      border-radius: 20px;
+      
+      .info-slide{
+        padding: 1rem;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize($color: #000000, $amount: .3);
+        color: v.$color-1;
+        text-align: center;
+        position: absolute;
+
+        h3{
+          margin-bottom: 1rem;
+        }
+
+        p{
+          font-size: f.rem(12);
+          margin-bottom: 1rem;
+
+        }
+      }
+    }
+
+    .buttons{
+      width: 85%;
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      
+      button{
+        border: none;
+        background-color: v.$color-1;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      button:first-of-type svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

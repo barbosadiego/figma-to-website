@@ -1,3 +1,6 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
 *{
   box-sizing: border-box;
 }
@@ -13,7 +16,7 @@ body{
   padding: 10px;
 }
 
-body, h1, h2, h3, p, li, ul, a{
+body, h1, h2, h3, h4, p, li, ul, a{
   margin: 0px;
   padding: 0px;
 }
@@ -33,4 +36,29 @@ a{
 img{
   max-width: 100%;
   display: block;
+}
+
+.section-title{
+  font-style: f.rem(12);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 16px;
+  color: v.$color-3;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle{
+  font-size: f.rem(20);
+  font-weight: 600;
+  line-height: 26px;
+  color: v.$color-2;
+}
+
+.text{
+  font-size: f.rem(14);
+  font-weight: 400;
+  line-height: 16px;
+  color: v.$color-5;
+  margin: 1rem 0px;
 }
