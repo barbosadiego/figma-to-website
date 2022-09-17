@@ -10,6 +10,7 @@ body{
 .container{
   max-width: 1180px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 body, h1, h2, h3, p, li, ul, a{
@@ -27,4 +28,9 @@ a{
 
 .hidde{
   display: none !important;
+}
+
+img{
+  max-width: 100%;
+  display: block;
 }

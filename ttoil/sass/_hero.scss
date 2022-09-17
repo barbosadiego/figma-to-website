@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use 'functions' as f;
+
+.hero{
+  display: grid;
+  justify-items: center;
+  position: relative;
+
+  &__info{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    color: v.$color-1;
+    background-color: transparentize($color: #000000, $amount: 0.5);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    z-index: 1;
+
+    h1{
+      font-size: f.rem(22);
+    }
+
+    p{
+      font-size: f.rem(12);
+    }
+
+    .who{
+      color: v.$color-3;
+      text-decoration: underline;
+    }
+  }
+}

@@ -5,6 +5,8 @@
 header {
   // height: 0px;
   transition: .2s ease-in-out;
+  z-index: 10;
+
   &.active {
     background-image: url(../img/mobile/menu-bg.png);
     min-height: 100vh;
@@ -23,7 +25,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 24px;
-    z-index: 10;
 
     &__mobile-close{
       width: 36px;

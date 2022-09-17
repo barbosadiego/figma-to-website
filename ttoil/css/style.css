@@ -9,6 +9,7 @@ body {
 .container {
   max-width: 1180px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 body, h1, h2, h3, p, li, ul, a {
@@ -28,9 +29,14 @@ a {
   display: none !important;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 header {
-  height: 0px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 10;
 }
 header.active {
   background-image: url(../img/mobile/menu-bg.png);
@@ -39,6 +45,10 @@ header.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #293037;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 header .nav {
   display: flex;
@@ -116,6 +126,42 @@ header .nav__menu .social > div {
   justify-content: center;
   gap: 24px;
   margin-top: 24px;
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  position: relative;
+}
+.hero__info {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 10px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  z-index: 1;
+}
+.hero__info h1 {
+  font-size: 1.375rem;
+}
+.hero__info p {
+  font-size: 0.75rem;
+}
+.hero__info .who {
+  color: #C1844D;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
