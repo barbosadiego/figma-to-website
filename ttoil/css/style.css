@@ -6,10 +6,6 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-[hidden] {
-  display: none;
-}
-
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -28,15 +24,93 @@ a {
   text-decoration: none;
 }
 
+.hidde {
+  display: none !important;
+}
+
+header {
+  min-height: 100vh;
+  background-image: url(../img/mobile/menu-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #293037;
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+header .nav__mobile-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #B4B4B4;
+  border-radius: 10px;
+}
+header .nav__menu-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
 @media screen and (min-width: 1025px) {
-  .nav .menu-btn {
+  header .nav__menu-btn {
     display: none;
   }
 }
-.nav #menu {
+header .nav__menu {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 115px;
+  width: calc(100% - 48px);
+}
+header .nav__menu[hidden] {
+  display: none;
+}
+header .nav__menu .logo {
+  display: none;
+}
+header .nav__menu li a, header .nav__menu li p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  padding: 24px 0;
+  display: block;
+}
+header .nav__menu li.lang__subitem {
+  cursor: pointer;
+}
+header .nav__menu li.lang__subitem a {
+  color: #C1844D;
+}
+header .nav__menu .social {
+  margin-top: 40px;
+  border-top: 1px solid #B4B4B4;
+  padding: 24px 0px;
+}
+header .nav__menu .social p {
+  text-align: center;
+  color: #B4B4B4;
+}
+header .nav__menu .social > div {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

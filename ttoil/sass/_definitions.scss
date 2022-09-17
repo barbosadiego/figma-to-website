@@ -3,11 +3,8 @@
 }
 
 body{
-  font-family: 'Space Grotesk', sans-serif;;
-}
-
-[hidden]{
-  display: none;
+  font-family: 'Space Grotesk', sans-serif;
+  // background-image: url(../img/noise-bg.png);
 }
 
 .container{
@@ -26,4 +23,8 @@ ul, li{
 
 a{
   text-decoration: none;
+}
+
+.hidde{
+  display: none !important;
 }
