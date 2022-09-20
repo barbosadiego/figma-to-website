@@ -8,28 +8,31 @@
   }
 
   &__carossel{
-    height: 230px;
     position: relative;
-    overflow: hidden;
-    // max-width: 360px;
+    max-width: 360px;
+    margin: 0 auto;
     &:hover{
       cursor: grab;
     }
     
     .carossel-container{
-      padding: 1rem;
+      height: 230px;
+      overflow: hidden;
       display: flex;
-      justify-items: center;
-      gap: 1rem;
     }
-
+    
     .carossel-item{
-      flex: 1 0 340px;
-      height: 200px;
+      width: 100%;
+      transition: .3s;
+      flex: 1 0 auto;
+      height: 100%;
       position: relative;
       overflow: hidden;
       border-radius: 20px;
       user-select: none;
+      &:first-child{
+        margin-left: -100%;
+      }
       
       .info-slide{
         padding: 1rem;
@@ -54,7 +57,7 @@
     .buttons{
       width: 85%;
       position: absolute;
-      bottom: 60px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -64,8 +67,8 @@
         border: none;
         background-color: v.$color-1;
         cursor: pointer;
-        width: 24px;
-        height: 24px;
+        width: 29px;
+        height: 29px;
         border-radius: 50%;
       }
 

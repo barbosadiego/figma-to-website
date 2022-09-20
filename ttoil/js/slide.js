@@ -1,53 +1,66 @@
 export default function slide() {
-  const carosselContainer = document.querySelector('[data-slide="carossel"]');
-  const slideContainer = document.querySelector('[data-slide="container"]');
-  const slideItems = document.querySelectorAll('[data-slide="item"]');
-  const previous = document.querySelector('[data-slide="left"]');
-  const next = document.querySelector('[data-slide="right"]');
+  const slidesContainer = document.querySelector('[data-slide="container"]');
 
-  if (carosselContainer) {
-    carosselContainer.addEventListener('mousedown', mouseDown);
+  if (slidesContainer) {
+    const left = document.querySelector('[data-slide="left"]');
+    const right = document.querySelector('[data-slide="right"]');
+    let slideItems = document.querySelectorAll('[data-slide="item"]');
+    let positions = {startX: 0, totalMoviment: 0}
 
-    let startX = 0;
-    let totalMoviment = 0;
-    const { left: initial, right: final, width } = carosselContainer.getBoundingClientRect();
-
-    //move slide item method
-    function moveSlide(moviment){
-      slideContainer.style.transform = `translate3d(${moviment * 1.7}px,0,0)`;
+    //show previous element of slide
+    function previous() {
+      const first = slideItems[0];
+      slidesContainer.appendChild(first);
+      slideItems = document.querySelectorAll('[data-slide="item"]');
     }
 
-    //mouse click
-    function mouseDown({ clientX }) {
-      carosselContainer.style.cursor = 'grabbing';
-      startX = clientX - totalMoviment;
-      carosselContainer.addEventListener('mousemove', mouseMove);
+    //show next element of slide
+    function next() {
+      const last = slideItems[slideItems.length - 1];
+      slidesContainer.prepend(last);
+      slideItems = document.querySelectorAll('[data-slide="item"]');
     }
 
-    //mouse moving
-    function mouseMove({ clientX }) {
-      carosselContainer.addEventListener('mouseup', mouseUp);
-      totalMoviment = clientX - startX;
-      moveSlide(totalMoviment)
+    //pointer events
+    function handleEvent(e) {
+      if (e.type === 'touchstart') {
+        e.preventDefault();
+        console.log('touch');
+        return;
+      }
+      this.addEventListener('mousedown', onMouseDown);
+    }
+
+    function onMouseDown(e) {
+      positions.startX = e.x
+      slidesContainer.style.cursor = 'grabbing';
+      slideItems.forEach(slide => slide.style.transition = 'none')
+      this.addEventListener('mousemove', onMouseMove)
+      this.addEventListener('mouseup', onMouseUp)
+    }
+
+    function onMouseMove(e){
+      positions.totalMoviment = positions.startX - e.x
+      slideItems[1].style.transform = `translate3d(${-positions.totalMoviment}px, 0px, 0px)`
     }
     
-    //mouse click up
-    function mouseUp() {
-      carosselContainer.style.cursor = 'grab';
-      startX = totalMoviment;
-      const carosselWidth = window.innerWidth * (slideItems.length - 1)
-      
-      if (totalMoviment > initial) {
-        totalMoviment = 0;
-        moveSlide(totalMoviment)
-      } else if (Math.abs(totalMoviment) >= (window.innerWidth)){
-        totalMoviment = -carosselWidth
-        moveSlide(carosselWidth)
-
-        console.log(carosselWidth)
-      }
-      
-      carosselContainer.removeEventListener('mousemove', mouseMove);
+    function onMouseUp(){
+      if(positions.totalMoviment > 10) previous()
+      else if (positions.totalMoviment < 10) next()
+      slidesContainer.style.cursor = 'grab';
+      this.removeEventListener('mousemove', onMouseMove)
+      slideItems.forEach((slide) => {
+        slide.style.transform = ``;
+        slide.style.transition = '.3s'
+      })
     }
+
+    //EVENTS
+    left.addEventListener('click', previous);
+    right.addEventListener('click', next);
+
+    ['click', 'touchstart'].forEach((event) => {
+      slidesContainer.addEventListener(event, handleEvent);
+    });
   }
 }

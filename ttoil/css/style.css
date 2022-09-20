@@ -193,26 +193,30 @@ header .nav__menu .social > div {
   height: 100%;
 }
 .about__carossel {
-  height: 230px;
   position: relative;
-  overflow: hidden;
+  max-width: 360px;
+  margin: 0 auto;
 }
 .about__carossel:hover {
   cursor: grab;
 }
 .about__carossel .carossel-container {
-  padding: 1rem;
+  height: 230px;
+  overflow: hidden;
   display: flex;
-  justify-items: center;
-  gap: 1rem;
 }
 .about__carossel .carossel-item {
-  flex: 1 0 340px;
-  height: 200px;
+  width: 100%;
+  transition: 0.3s;
+  flex: 1 0 auto;
+  height: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
   user-select: none;
+}
+.about__carossel .carossel-item:first-child {
+  margin-left: -100%;
 }
 .about__carossel .carossel-item .info-slide {
   padding: 1rem;
@@ -233,7 +237,7 @@ header .nav__menu .social > div {
 .about__carossel .buttons {
   width: 85%;
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -243,8 +247,8 @@ header .nav__menu .social > div {
   border: none;
   background-color: #ffffff;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 29px;
+  height: 29px;
   border-radius: 50%;
 }
 .about__carossel .buttons button:first-of-type svg {
