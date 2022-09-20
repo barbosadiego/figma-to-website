@@ -9,6 +9,7 @@ export default function slide() {
 
     //show previous element of slide
     function previous() {
+      slideIndexNav('prev');
       const first = slideItems[0];
       slidesContainer.appendChild(first);
       slideItems = document.querySelectorAll('[data-slide="item"]');
@@ -16,6 +17,7 @@ export default function slide() {
 
     //show next element of slide
     function next() {
+      slideIndexNav('next');
       const last = slideItems[slideItems.length - 1];
       slidesContainer.prepend(last);
       slideItems = document.querySelectorAll('[data-slide="item"]');
@@ -49,7 +51,7 @@ export default function slide() {
     function onMove(e) {
       let event = e.type;
       if (event === 'touchmove') {
-        positions.totalMoviment = positions.startX - e.touches[0].clientX
+        positions.totalMoviment = positions.startX - e.touches[0].clientX;
       } else {
         positions.totalMoviment = positions.startX - e.x;
       }
@@ -68,7 +70,52 @@ export default function slide() {
       });
     }
 
-    //EVENTS
+    //DOTS VISUAL ELEMENTS
+    //create dots
+    function createDots() {
+      const dotsContainer = document.querySelector('[data-slide="dots"]');
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dotsContainer.appendChild(dot);
+    }
+
+    //insert dots
+    slideItems.forEach((slide) => createDots());
+
+    //add class active
+    function activeDot(index) {
+      const items = document.querySelectorAll('.dot');
+      items.forEach(item => item.classList.remove('active'));
+      slideItems.forEach(slide => slide.classList.remove('active'))
+
+      items[index].classList.add('active');
+      slideItems[index].classList.add('active');
+    }
+    
+    let index = 0;
+    function slideIndexNav(direction) {
+      const last = slideItems.length - 1;
+
+      if(direction === 'prev') {
+        index === last ? index = 0 : index++;
+      } else if (direction === 'next'){
+        index <= 0 ? index = last : index--;
+      }
+
+      const indexSlides = {
+        previous: index ? index - 1 : undefined,
+        active: index,
+        next: index === last ? undefined : index + 1,
+      };
+
+      console.log(indexSlides)
+      activeDot(indexSlides.active)
+    }
+    
+    activeDot(0);
+    // slideIndexNav
+    
+    //GENERAL EVENTS
     left.addEventListener('click', previous);
     right.addEventListener('click', next);
 

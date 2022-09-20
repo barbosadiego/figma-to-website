@@ -19,37 +19,62 @@
       height: 230px;
       overflow: hidden;
       display: flex;
+
+      .carossel-item{
+        width: 100%;
+        transition: .3s;
+        flex: 1 0 auto;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        user-select: none;
+        &:first-child{
+          margin-left: -100%;
+        }
+        
+        .info-slide{
+          padding: 1rem;
+          background-color: transparentize($color: #000000, $amount: .3);
+          color: v.$color-1;
+          text-align: center;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+  
+          h3{
+            margin-bottom: 1rem;
+          }
+  
+          p{
+            font-size: f.rem(12);
+            margin-bottom: 1rem;
+          }
+        }
+      }
     }
     
-    .carossel-item{
-      width: 100%;
-      transition: .3s;
-      flex: 1 0 auto;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      user-select: none;
-      &:first-child{
-        margin-left: -100%;
-      }
-      
-      .info-slide{
-        padding: 1rem;
-        background-color: transparentize($color: #000000, $amount: .3);
-        color: v.$color-1;
-        text-align: center;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
+    .dots{
+      max-width: 90%;
+      height: 10px;
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 4px;
 
-        h3{
-          margin-bottom: 1rem;
-        }
-
-        p{
-          font-size: f.rem(12);
-          margin-bottom: 1rem;
+      .dot{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: transparentize($color: #fff, $amount: .5);
+        transition: .3s;
+        &.active{
+          width: 16px;
+          border-radius: 6px;
+          background-color: v.$color-1;
         }
       }
     }
