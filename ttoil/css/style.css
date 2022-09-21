@@ -356,4 +356,59 @@ header .nav__menu .social > div {
   margin-inline: 8px;
 }
 
+.contact__form {
+  background-image: url(../img/mobile/call-center-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.contact__form h3 {
+  margin-top: 1rem;
+}
+.contact__form p {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.contact__form form {
+  display: grid;
+  gap: 1rem;
+}
+.contact__form form input, .contact__form form textarea {
+  text-align: center;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 0px 1rem;
+  font-size: 1rem;
+}
+.contact__form form input::placeholder, .contact__form form textarea::placeholder {
+  color: #ffffff;
+}
+.contact__form form input {
+  height: 42px;
+}
+.contact__form form textarea {
+  height: 115px;
+  padding: 1rem;
+}
+.contact__form form textarea::placeholder {
+  line-height: 80px;
+}
+.contact__form .submit {
+  background-color: #ffffff;
+  cursor: pointer;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  margin-top: 1rem;
+  width: 100%;
+  font-family: inherit;
+}
+
 /*# sourceMappingURL=style.css.map */

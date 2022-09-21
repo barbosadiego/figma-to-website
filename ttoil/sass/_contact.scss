@@ -1,0 +1,68 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
+.contact{
+  
+  &__form{
+    background-image: url(../img/mobile/call-center-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1rem;
+
+    h3{
+      margin-top: 1rem;
+    }
+  
+    p{
+      color: v.$color-1;
+      margin-bottom: 1rem;
+      font-size: f.rem(20);
+    }
+  
+    form{
+      display: grid;
+      gap: 1rem;
+
+      input, textarea{
+        text-align: center;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.3);;
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+        color: v.$color-1;
+        padding: 0px 1rem;
+        font-size: 1rem;
+        &::placeholder{
+          color: v.$color-1;
+        }
+      }
+
+      input{
+        height: 42px;
+      }
+
+      textarea{
+        height: 115px;
+        padding: 1rem;
+        &::placeholder{
+          line-height: 80px;
+        }
+      }
+    }
+
+    .submit{
+      background-color: v.$color-1;
+      cursor: pointer;
+      height: 42px;
+      border-radius: 8px;
+      border: 1px solid #fff;
+      margin-top: 1rem;
+      width: 100%;
+      font-family: inherit;
+    }
+  }
+
+}
