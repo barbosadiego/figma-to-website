@@ -46,6 +46,7 @@ img{
   color: v.$color-3;
   text-decoration: underline;
   margin-bottom: 1rem;
+  padding: 0px 1rem;
 }
 
 .section-subtitle{
@@ -53,6 +54,7 @@ img{
   font-weight: 600;
   line-height: 26px;
   color: v.$color-2;
+  padding: 0px 1rem;
 }
 
 .text{
@@ -61,4 +63,5 @@ img{
   line-height: 16px;
   color: v.$color-5;
   margin: 1rem 0px;
+  padding: 0px 1rem;
 }

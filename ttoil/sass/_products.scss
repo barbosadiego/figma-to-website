@@ -1,0 +1,58 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
+.products{
+  color: v.$color-1;
+  text-align: center;
+
+  &__grid{
+    background-color: v.$color-2;
+    border-radius: 20px;
+    padding: 1rem;
+    display: grid;
+    gap: 24px;
+  }
+
+  &__item{
+    display: grid;
+    gap: 1rem;
+
+    img{
+      border-radius: 10px;
+    }
+
+    p{
+      font-size: f.rem(12);
+    }
+
+    .section-title{
+      font-size: f.rem(14);
+    }
+
+    .petrochemical-list{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      text-align: left;
+      justify-items: end;
+      column-gap: 8px;
+      
+      li{
+        font-size: f.rem(11);
+
+        & + li{
+          margin: 1rem 0px;
+        }
+
+        &::before{
+          content: '';
+          display: inline-block;
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          background-color: v.$color-1;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
