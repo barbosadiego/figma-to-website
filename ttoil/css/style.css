@@ -25,8 +25,10 @@ a {
   text-decoration: none;
 }
 
-.hidde {
-  display: none !important;
+@media screen and (max-width: 767px) {
+  .hidde {
+    display: none !important;
+  }
 }
 
 img {
@@ -132,18 +134,9 @@ header .nav__menu {
     top: 115px;
     width: calc(100% - 48px);
   }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  header .nav__menu[hidden] {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
   header .nav__menu .logo {
     display: none;
   }
-}
-@media screen and (max-width: 767px) {
   header .nav__menu li a,
 header .nav__menu li p {
     color: #ffffff;
@@ -161,6 +154,7 @@ header .nav__menu li p.lang {
 }
 @media screen and (min-width: 768px) {
   header .nav__menu {
+    position: initial;
     width: 100%;
     justify-content: space-between;
     align-items: center;

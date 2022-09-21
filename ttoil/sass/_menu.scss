@@ -75,12 +75,6 @@ header {
         top: 115px;
         width: calc(100% - 48px);
 
-        &[hidden] {
-          @media screen and (max-width: 767px) {
-            display: none;
-          }
-        }
-
         .logo {
           display: none;
         }
@@ -104,6 +98,7 @@ header {
       }
       //menu tablet and desktop
       @media screen and (min-width: 768px) {
+        position: initial;
         width: 100%;
         justify-content: space-between;
         align-items: center;
