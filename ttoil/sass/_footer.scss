@@ -1,0 +1,69 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
+.footer{
+
+  &__mobile{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem;
+    padding: 1rem;
+
+    .links{
+      grid-column: 1/2;
+      grid-row: 2/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 27px;
+    }
+
+    .social{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      gap: 24px;
+
+      li{
+        cursor: pointer;
+      }
+    }
+
+    .adress{
+      grid-column: 2/3;
+      grid-row: 2/3;
+      font-size: f.rem(12);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .phones{
+      grid-column: 2/3;
+      grid-row: 3;
+      font-size: f.rem(14);
+      font-weight: 400;
+
+      li{
+        display: inline-block;
+        padding: .2rem 0px;
+      }
+
+      a{
+        color: v.$color-2;
+      }
+    }
+
+    .credits{
+      grid-column: 1/-1;
+      grid-row: 4;
+      text-align: center;
+      border-top: 1px solid v.$color-2;
+      
+      p{
+        margin-top: 1rem;
+        font-size: f.rem(12);
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -411,4 +411,59 @@ header .nav__menu .social > div {
   font-family: inherit;
 }
 
+.footer__mobile {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.footer__mobile .links {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 27px;
+}
+.footer__mobile .social {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  gap: 24px;
+}
+.footer__mobile .social li {
+  cursor: pointer;
+}
+.footer__mobile .adress {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.footer__mobile .phones {
+  grid-column: 2/3;
+  grid-row: 3;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.footer__mobile .phones li {
+  display: inline-block;
+  padding: 0.2rem 0px;
+}
+.footer__mobile .phones a {
+  color: #293037;
+}
+.footer__mobile .credits {
+  grid-column: 1/-1;
+  grid-row: 4;
+  text-align: center;
+  border-top: 1px solid #293037;
+}
+.footer__mobile .credits p {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=style.css.map */
