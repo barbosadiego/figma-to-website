@@ -4,7 +4,7 @@
 
 header {
   // height: 0px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 10;
 
   &.active {
@@ -26,88 +26,118 @@ header {
     align-items: center;
     padding: 24px;
 
-    &__mobile-close{
-      width: 36px;
-      height: 36px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid v.$color-5;
-      border-radius: 10px;
-      cursor: pointer;
+    &__mobile-logo {
+      @media screen and (min-width: 767px) {
+        display: none;
+      }
+    }
+
+    &__mobile-close {
+      display: none;
+      @media screen and (max-width: 767px) {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid v.$color-5;
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
 
     &__menu-btn {
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-size: f.rem(14);
-      font-weight: 500;
-      font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
-      line-height: f.rem(16);
-      text-transform: uppercase;
-      @include m.device(desktop) {
-        display: none;
+      display: none;
+      @media screen and (max-width: 767px) {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: f.rem(14);
+        font-weight: 500;
+        font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+        line-height: f.rem(16);
+        text-transform: uppercase;
+        // @include m.device(desktop) {
+        //   display: none;
+        // }
       }
     }
 
     &__menu {
       display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 115px;
-      width: calc(100% - 48px);
+      //menu mobile version
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        flex-direction: column;
+        top: 115px;
+        width: calc(100% - 48px);
 
-      &[hidden] {
-        display: none;
-      }
-
-      .logo {
-        display: none;
-      }
-
-      li {
-        a, p {
-          color: v.$color-1;
-          font-weight: 500;
-          font-size: f.rem(16);
-          line-height: f.rem(20);
-          text-transform: uppercase;
-          padding: 24px 0;
-          display: block;
+        &[hidden] {
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
         }
 
-        &.lang {
-          
-          &__subitem {
-            // transform: rotateX(90deg);
-            // transition: all .3s;
-            cursor: pointer;
-            a {
+        .logo {
+          display: none;
+        }
+
+        li {
+          a,
+          p {
+            color: v.$color-1;
+            font-weight: 500;
+            font-size: f.rem(16);
+            line-height: f.rem(20);
+            text-transform: uppercase;
+            padding: 24px 0;
+            display: block;
+
+            &.lang {
               color: v.$color-3;
             }
           }
         }
       }
+      //menu tablet and desktop
+      @media screen and (min-width: 768px) {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
 
-      .social{
-        margin-top: 40px;
-        border-top: 1px solid v.$color-5;
-        padding: 24px 0px;
+        a {
+          text-transform: uppercase;
+          color: v.$color-2;
 
-        p{
-          text-align: center;
-          color: v.$color-5;
+          &.lang {
+            color: v.$color-3;
+          }
         }
+      }
 
-        & > div{
-          display: flex;
-          justify-content: center;
-          gap: 24px;
-          margin-top: 24px;
+      .social {
+        display: none;
+        //mobile version
+        @media screen and (max-width: 767px) {
+          display: initial;
+          margin-top: 40px;
+          border-top: 1px solid v.$color-5;
+          padding: 24px 0px;
+
+          p {
+            text-align: center;
+            color: v.$color-5;
+          }
+
+          & > div {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+          }
         }
       }
     }
