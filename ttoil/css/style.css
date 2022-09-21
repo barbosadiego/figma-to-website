@@ -330,4 +330,30 @@ header .nav__menu .social > div {
   margin-right: 8px;
 }
 
+.locations .countries {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #C1844D;
+  border-bottom: 1px solid #C1844D;
+  padding: 8px 0;
+}
+.locations .countries li {
+  text-transform: uppercase;
+  color: #C1844D;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.locations .countries li + li::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #C1844D;
+}
+
 /*# sourceMappingURL=style.css.map */

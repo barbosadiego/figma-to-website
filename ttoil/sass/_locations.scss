@@ -1,0 +1,32 @@
+@use 'functions' as f;
+@use 'variables' as v;
+
+.locations{
+  .countries{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid v.$color-3;
+    border-bottom: 1px solid v.$color-3;
+    padding: 8px 0;
+
+    li{
+      text-transform: uppercase;
+      color: v.$color-3;
+      font-size: f.rem(12);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      & + li::before{
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: v.$color-3;
+      }
+    }
+  }
+}
