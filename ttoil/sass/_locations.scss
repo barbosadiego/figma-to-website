@@ -5,7 +5,7 @@
   .countries{
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-top: 1px solid v.$color-3;
     border-bottom: 1px solid v.$color-3;
@@ -17,7 +17,6 @@
       font-size: f.rem(12);
       display: flex;
       align-items: center;
-      gap: 8px;
 
       & + li::before{
         content: '';
@@ -26,6 +25,7 @@
         height: 4px;
         border-radius: 2px;
         background-color: v.$color-3;
+        margin-inline: 8px;
       }
     }
   }
