@@ -5,12 +5,14 @@
 
   img{
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__carossel{
     position: relative;
-    max-width: 360px;
-    margin: 0 auto;
+    max-width: 450px;
+    margin: 24px auto;
     &:hover{
       cursor: grab;
     }

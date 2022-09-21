@@ -191,11 +191,13 @@ header .nav__menu .social > div {
 
 .about img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .about__carossel {
   position: relative;
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 450px;
+  margin: 24px auto;
 }
 .about__carossel:hover {
   cursor: grab;
