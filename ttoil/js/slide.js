@@ -86,12 +86,10 @@ export default function slide() {
     function activeDot(index) {
       const items = document.querySelectorAll('.dot');
       items.forEach(item => item.classList.remove('active'));
-      slideItems.forEach(slide => slide.classList.remove('active'))
-
       items[index].classList.add('active');
-      slideItems[index].classList.add('active');
     }
     
+    // slideIndexNav
     let index = 0;
     function slideIndexNav(direction) {
       const last = slideItems.length - 1;
@@ -108,12 +106,10 @@ export default function slide() {
         next: index === last ? undefined : index + 1,
       };
 
-      console.log(indexSlides)
       activeDot(indexSlides.active)
     }
     
     activeDot(0);
-    // slideIndexNav
     
     //GENERAL EVENTS
     left.addEventListener('click', previous);
