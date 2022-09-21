@@ -214,15 +214,44 @@ header .nav__menu .social {
   gap: 8px;
   z-index: 1;
 }
+@media screen and (min-width: 768px) {
+  .hero__info {
+    border-radius: 35px;
+  }
+}
 .hero__info h1 {
   font-size: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__info h1 {
+    font-size: 3.75rem;
+  }
 }
 .hero__info p {
   font-size: 0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__info p {
+    font-size: 1rem;
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__info p {
+    font-size: 1.25rem;
+    max-width: 50ch;
+    margin: 50px auto 0px;
+  }
+}
 .hero__info .who {
   color: #C1844D;
   text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .hero__info .who {
+    font-size: 1.25rem;
+  }
 }
 
 .about img {

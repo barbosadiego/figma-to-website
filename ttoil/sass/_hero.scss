@@ -1,12 +1,13 @@
 @use 'variables' as v;
 @use 'functions' as f;
+@use 'mixins' as m;
 
-.hero{
+.hero {
   display: grid;
   justify-items: center;
   position: relative;
 
-  &__info{
+  &__info {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -25,18 +26,37 @@
     justify-content: center;
     gap: 8px;
     z-index: 1;
+    @include m.device(tablet) {
+      border-radius: 35px;
+    }
 
-    h1{
+    h1 {
       font-size: f.rem(22);
+      @include m.device(tablet) {
+        font-size: f.rem(60);
+      }
     }
 
-    p{
+    p {
       font-size: f.rem(12);
+      @include m.device(tablet) {
+        font-size: f.rem(16);
+        max-width: 50ch;
+        margin: 0 auto;
+      }
+      @include m.device(desktop) {
+        font-size: f.rem(20);
+        max-width: 50ch;
+        margin: 50px auto 0px;
+      }
     }
 
-    .who{
+    .who {
       color: v.$color-3;
       text-decoration: underline;
+      @include m.device(tablet) {
+        font-size: f.rem(20);
+      }
     }
   }
 }
