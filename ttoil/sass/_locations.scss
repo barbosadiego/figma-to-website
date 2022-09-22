@@ -1,5 +1,6 @@
 @use 'functions' as f;
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .locations{
   .countries{
@@ -27,6 +28,34 @@
         background-color: v.$color-3;
         margin-inline: 8px;
       }
+    }
+  }
+
+  @include m.device(tablet){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 60px 0px;
+    row-gap: 30px;
+    .countries{
+      display: none;
+    }
+
+    .text{
+      font-size: f.rem(16);
+      line-height: 1.2;
+    }
+
+    picture{
+      grid-column: 1/-1;
+    }
+  }
+
+  @include m.device(desktop){
+    padding: 80px 0px;
+    row-gap: 60px;
+    .text{
+      font-size: f.rem(20);
+      line-height: 1.4;
     }
   }
 }

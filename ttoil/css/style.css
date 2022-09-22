@@ -588,6 +588,34 @@ header .nav__menu .social {
   background-color: #C1844D;
   margin-inline: 8px;
 }
+@media screen and (min-width: 768px) {
+  .locations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 0px;
+    row-gap: 30px;
+  }
+  .locations .countries {
+    display: none;
+  }
+  .locations .text {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .locations picture {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .locations {
+    padding: 80px 0px;
+    row-gap: 60px;
+  }
+  .locations .text {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
 
 .contact__form {
   background-image: url(../img/mobile/call-center-mobile.jpg);
