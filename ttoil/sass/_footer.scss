@@ -1,5 +1,6 @@
 @use 'functions' as f;
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .footer{
 
@@ -63,6 +64,69 @@
         margin-top: 1rem;
         font-size: f.rem(12);
         display: inline-block;
+      }
+    }
+  }
+
+  &__desktop{
+    @include m.device(tablet){
+      .links{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 40px;
+        text-transform: capitalize;
+        
+        
+        h3{
+          color: v.$color-2;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+
+        li{
+          padding: 5px 0px;
+        }
+
+        a{
+          color: v.$color-2;
+          font-size: f.rem(14);
+        }
+
+        address{
+          font-style: normal;
+          font-size: f.rem(14);
+          color: v.$color-2;
+        }
+      }
+    }
+    @include m.device(desktop){
+      .links{
+        grid-template-columns: repeat(6,1fr);
+
+        h3{
+          margin-bottom: 40px;
+        }
+
+        li{
+          padding: 10px 0px;
+        }
+      }
+    }
+
+    .credits{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid v.$color-2;
+      padding: 20px 0px;
+
+      .social{
+        display: flex;
+        gap: 24px;
+
+        li{
+          cursor: pointer;
+        }
       }
     }
   }
