@@ -3,19 +3,19 @@ export default function windowDesktop() {
   const tablet = matchMedia('(min-width:768px)');
 
   const applyMatch = () => {
-    tablet.matches 
-      ? footer.style.display = 'none'
-      : footer.style.display = 'grid'
-    ;
-  }
+    tablet.matches
+      ? (footer.style.display = 'none')
+      : (footer.style.display = 'grid');
+  };
 
-  function debounce(func, wait){
+  function debounce(func, wait) {
     let timeout;
-    return function(){
+    return function () {
       clearTimeout(timeout);
       timeout = setTimeout(func, wait);
-    }
+    };
   }
-  
-  window.addEventListener('resize', debounce(applyMatch, 50))
+
+  window.addEventListener('resize', debounce(applyMatch, 50));
+  window.addEventListener('DOMContentLoaded', applyMatch);
 }
