@@ -1,11 +1,17 @@
 export default function windowDesktop() {
   const footer = document.querySelector('[data-footer="mobile"]');
+  const desktopFooter = document.querySelector('[data-footer="desktop"]');
   const tablet = matchMedia('(min-width:768px)');
+  console.log(desktopFooter);
 
   const applyMatch = () => {
-    tablet.matches
-      ? (footer.style.display = 'none')
-      : (footer.style.display = 'grid');
+    if (tablet.matches) {
+      footer.style.display = 'none';
+      desktopFooter.style.display = 'unset';
+    } else {
+      footer.style.display = 'grid';
+      desktopFooter.style.display = 'none';
+    }
   };
 
   function debounce(func, wait) {
