@@ -141,7 +141,7 @@
     @include m.device(desktop){
       gap: 100px;
       p{
-        font-size: f.rem(16);
+        font-size: f.rem(14);
         line-height: 1.4;
       }
     }

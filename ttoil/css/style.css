@@ -558,7 +558,7 @@ header .nav__menu .social {
     gap: 100px;
   }
   .products__item p {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.4;
   }
 }
@@ -626,6 +626,17 @@ header .nav__menu .social {
   border-radius: 20px;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .contact__form {
+    background-image: url(../img/desktop/call-center.jpg);
+    padding: 40px 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact__form {
+    padding: 80px 150px;
+  }
+}
 .contact__form h3 {
   margin-top: 1rem;
 }
@@ -633,6 +644,11 @@ header .nav__menu .social {
   color: #ffffff;
   margin-bottom: 1rem;
   font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__form p {
+    margin-bottom: 2rem;
+  }
 }
 .contact__form form {
   display: grid;
@@ -670,6 +686,18 @@ header .nav__menu .social {
   margin-top: 1rem;
   width: 100%;
   font-family: inherit;
+}
+@media screen and (min-width: 768px) {
+  .contact__form .submit {
+    width: 30%;
+    background-color: transparent;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+  .contact__form .submit:hover {
+    background-color: #ffffff;
+    color: #293037;
+  }
 }
 
 .footer__mobile {
