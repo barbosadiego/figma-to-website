@@ -425,6 +425,16 @@ header .nav__menu .social {
   transform: rotate(180deg);
 }
 
+@media screen and (min-width: 768px) {
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services.container {
+    margin: 60px auto;
+  }
+}
+
 .products {
   color: #ffffff;
   text-align: center;
