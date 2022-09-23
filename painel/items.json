@@ -18,5 +18,9 @@
   {
     "img":"./painel/img/digitux.jpg",
     "url":"./digitux/index.html"
+  },
+  {
+    "img":"./painel/img/ttoil.jpg",
+    "url":"./ttoil/index.html"
   }
 ]
