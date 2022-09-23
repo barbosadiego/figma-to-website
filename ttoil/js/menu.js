@@ -22,13 +22,13 @@ export default function menuMobile() {
 
         if (nav.classList.contains('active')) {
           this.setAttribute('aria-label', 'close menu');
-          logo.src = '/ttoil/img/logo-dark.svg';
+          logo.src = './img/logo-dark.svg';
           closeBtn.classList.remove('hidde');
           menuBtn.classList.add('hidde');
           menuEl.style.display = 'flex';
         } else {
           this.setAttribute('aria-label', 'open menu');
-          logo.src = '/ttoil/img/ttoil-logo.png';
+          logo.src = './img/ttoil-logo.png';
           closeBtn.classList.add('hidde');
           menuBtn.classList.remove('hidde');
           menuEl.style.display = 'none';
