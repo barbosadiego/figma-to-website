@@ -27,14 +27,14 @@ header {
     padding: 24px;
 
     &__mobile-logo {
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 764px) {
         display: none;
       }
     }
 
     &__mobile-close {
       display: none;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 764px) {
         width: 36px;
         height: 36px;
         display: flex;
@@ -48,7 +48,7 @@ header {
 
     &__menu-btn {
       display: none;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 764px) {
         border: none;
         background-color: transparent;
         cursor: pointer;
@@ -60,16 +60,14 @@ header {
         font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
         line-height: f.rem(16);
         text-transform: uppercase;
-        // @include m.device(desktop) {
-        //   display: none;
-        // }
       }
     }
 
     &__menu {
       display: flex;
       //menu mobile version
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 764px) {
+        display: none;
         position: absolute;
         flex-direction: column;
         top: 115px;
@@ -97,7 +95,7 @@ header {
         }
       }
       //menu tablet and desktop
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 764px) {
         position: initial;
         width: 100%;
         justify-content: space-between;
@@ -116,7 +114,7 @@ header {
       .social {
         display: none;
         //mobile version
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 764px) {
           display: initial;
           margin-top: 40px;
           border-top: 1px solid v.$color-5;

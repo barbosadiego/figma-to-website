@@ -64,6 +64,10 @@
           text-align: center;
           @include m.device(tablet){
             text-align: left;
+
+            h4{
+              padding: 0px;
+            }
           }
           position: absolute;
           top: 0px;

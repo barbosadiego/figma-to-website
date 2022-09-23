@@ -25,15 +25,17 @@ export default function slide() {
 
     //pointer events
     function handleEvent(e) {
+      e.preventDefault()
       if (e.type === 'touchstart') {
         e.preventDefault(e);
         onStart(e);
         return;
       }
-      this.addEventListener('mousedown', onStart);
+      onStart(e)
     }
 
     function onStart(e) {
+      e.preventDefault()
       let event = e.type;
       slidesContainer.style.cursor = 'grabbing';
       slideItems.forEach((slide) => (slide.style.transition = 'none'));
@@ -43,8 +45,8 @@ export default function slide() {
         slidesContainer.addEventListener('touchend', onEnd);
       } else {
         positions.startX = e.x;
-        this.addEventListener('mousemove', onMove);
-        this.addEventListener('mouseup', onEnd);
+        slidesContainer.addEventListener('mousemove', onMove);
+        slidesContainer.addEventListener('mouseup', onEnd);
       }
     }
 
@@ -115,7 +117,7 @@ export default function slide() {
     left.addEventListener('click', previous);
     right.addEventListener('click', next);
 
-    ['click', 'touchstart'].forEach((event) => {
+    ['touchstart', 'mousedown'].forEach((event) => {
       slidesContainer.addEventListener(event, handleEvent);
     });
   }

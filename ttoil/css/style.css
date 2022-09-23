@@ -86,7 +86,7 @@ header .nav {
   align-items: center;
   padding: 24px;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 764px) {
   header .nav__mobile-logo {
     display: none;
   }
@@ -94,7 +94,7 @@ header .nav {
 header .nav__mobile-close {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 764px) {
   header .nav__mobile-close {
     width: 36px;
     height: 36px;
@@ -109,7 +109,7 @@ header .nav__mobile-close {
 header .nav__menu-btn {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 764px) {
   header .nav__menu-btn {
     border: none;
     background-color: transparent;
@@ -127,8 +127,9 @@ header .nav__menu-btn {
 header .nav__menu {
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 764px) {
   header .nav__menu {
+    display: none;
     position: absolute;
     flex-direction: column;
     top: 115px;
@@ -152,7 +153,7 @@ header .nav__menu li p.lang {
     color: #C1844D;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 764px) {
   header .nav__menu {
     position: initial;
     width: 100%;
@@ -170,7 +171,7 @@ header .nav__menu li p.lang {
 header .nav__menu .social {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 764px) {
   header .nav__menu .social {
     display: initial;
     margin-top: 40px;
@@ -327,6 +328,9 @@ header .nav__menu .social {
 @media screen and (min-width: 768px) {
   .about__carossel .carossel-container .carossel-item .info-slide {
     text-align: left;
+  }
+  .about__carossel .carossel-container .carossel-item .info-slide h4 {
+    padding: 0px;
   }
 }
 .about__carossel .carossel-container .carossel-item .info-slide h3 {

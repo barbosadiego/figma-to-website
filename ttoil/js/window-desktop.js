@@ -2,7 +2,6 @@ export default function windowDesktop() {
   const footer = document.querySelector('[data-footer="mobile"]');
   const desktopFooter = document.querySelector('[data-footer="desktop"]');
   const tablet = matchMedia('(min-width:768px)');
-  console.log(desktopFooter);
 
   const applyMatch = () => {
     if (tablet.matches) {
