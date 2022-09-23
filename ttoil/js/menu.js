@@ -38,7 +38,7 @@ export default function menuMobile() {
       // events
       menuBtn.addEventListener('click', handleMenu);
       closeBtn.addEventListener('click', handleMenu);
-      links.forEach((link) => link.addEventListener('click', handleMenu));
+      links.forEach((link) => link.addEventListener('touchstart', handleMenu));
     }
   }
 

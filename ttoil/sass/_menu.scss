@@ -65,6 +65,47 @@ header {
 
     &__menu {
       display: flex;
+      overflow: hidden;
+
+      li{
+        a{
+          width: 30%;
+          color: v.$color-2;
+        }
+        &.lang {
+          padding: 24px 0px;
+          text-transform: uppercase;
+          color: v.$color-3;
+          cursor: pointer;
+          position: relative;
+          user-select: none;
+          &.active .lang-submenu{
+            top: 40px;
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+          }
+  
+          .lang-submenu{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 0px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 10;
+            padding: 20px 0px;
+            transform: translateX(-20px);
+            
+            li{
+              overflow: hidden;
+              background-color: v.$color-1;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
       //menu mobile version
       @media screen and (max-width: 764px) {
         display: none;
@@ -78,19 +119,14 @@ header {
         }
 
         li {
-          a,
-          p {
+          a {
             color: v.$color-1;
             font-weight: 500;
             font-size: f.rem(16);
             line-height: f.rem(20);
             text-transform: uppercase;
-            padding: 24px 0;
+            padding: 14px 0;
             display: block;
-
-            &.lang {
-              color: v.$color-3;
-            }
           }
         }
       }
@@ -100,15 +136,7 @@ header {
         width: 100%;
         justify-content: space-between;
         align-items: center;
-
-        a {
-          text-transform: uppercase;
-          color: v.$color-2;
-
-          &.lang {
-            color: v.$color-3;
-          }
-        }
+        text-transform: uppercase;
       }
 
       .social {
@@ -116,7 +144,7 @@ header {
         //mobile version
         @media screen and (max-width: 764px) {
           display: initial;
-          margin-top: 40px;
+          margin-top: 10px;
           border-top: 1px solid v.$color-5;
           padding: 24px 0px;
 

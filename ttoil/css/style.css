@@ -126,6 +126,42 @@ header .nav__menu-btn {
 }
 header .nav__menu {
   display: flex;
+  overflow: hidden;
+}
+header .nav__menu li a {
+  width: 30%;
+  color: #293037;
+}
+header .nav__menu li.lang {
+  padding: 24px 0px;
+  text-transform: uppercase;
+  color: #C1844D;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+header .nav__menu li.lang.active .lang-submenu {
+  top: 40px;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+header .nav__menu li.lang .lang-submenu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 10;
+  padding: 20px 0px;
+  transform: translateX(-20px);
+}
+header .nav__menu li.lang .lang-submenu li {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
 @media screen and (max-width: 764px) {
   header .nav__menu {
@@ -138,19 +174,14 @@ header .nav__menu {
   header .nav__menu .logo {
     display: none;
   }
-  header .nav__menu li a,
-header .nav__menu li p {
+  header .nav__menu li a {
     color: #ffffff;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
     text-transform: uppercase;
-    padding: 24px 0;
+    padding: 14px 0;
     display: block;
-  }
-  header .nav__menu li a.lang,
-header .nav__menu li p.lang {
-    color: #C1844D;
   }
 }
 @media screen and (min-width: 764px) {
@@ -159,13 +190,7 @@ header .nav__menu li p.lang {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-  }
-  header .nav__menu a {
     text-transform: uppercase;
-    color: #293037;
-  }
-  header .nav__menu a.lang {
-    color: #C1844D;
   }
 }
 header .nav__menu .social {
@@ -174,7 +199,7 @@ header .nav__menu .social {
 @media screen and (max-width: 764px) {
   header .nav__menu .social {
     display: initial;
-    margin-top: 40px;
+    margin-top: 10px;
     border-top: 1px solid #B4B4B4;
     padding: 24px 0px;
   }

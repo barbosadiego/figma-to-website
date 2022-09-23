@@ -2,6 +2,7 @@ export default function scroll(){
   const links = document.querySelectorAll('.nav a[href^="#"]');
 
   links.forEach((link) => link.addEventListener('click', handleClick))
+  links.forEach((link) => link.addEventListener('touchstart', handleClick))
 
   function handleClick(e){
     e.preventDefault();
