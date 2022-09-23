@@ -65,10 +65,10 @@ header {
 
     &__menu {
       display: flex;
-      overflow: hidden;
+      // overflow-y: hidden;
 
-      li{
-        a{
+      li {
+        a {
           width: 30%;
           color: v.$color-2;
         }
@@ -79,17 +79,16 @@ header {
           cursor: pointer;
           position: relative;
           user-select: none;
-          &.active .lang-submenu{
+          &.active .lang-submenu {
             top: 40px;
-            height: auto;
             opacity: 1;
             visibility: visible;
           }
-  
-          .lang-submenu{
+
+          .lang-submenu {
             position: absolute;
             top: 0px;
-            left: 0px;
+            left: -40px;
             height: 0px;
             opacity: 0;
             visibility: hidden;
@@ -97,9 +96,11 @@ header {
             z-index: 10;
             padding: 20px 0px;
             transform: translateX(-20px);
-            
-            li{
-              overflow: hidden;
+            @media screen and (max-width:764px) {
+              left: 0px;
+            }
+
+            li {
               background-color: v.$color-1;
               padding: 10px 20px;
             }
